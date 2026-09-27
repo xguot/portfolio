@@ -48,7 +48,7 @@
 					Undergraduate Researcher · Quantum Computing · CS @ UVA
 				</h2>
 				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
-					Convex optimization for quantum information and quantum materials.
+					A CS student who fancies quantum.
 				</p>
 
 				<nav class="mt-16 hidden lg:block">
