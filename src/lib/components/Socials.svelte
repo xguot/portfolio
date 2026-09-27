@@ -2,7 +2,7 @@
 	const links = [
 		{ name: 'GitHub', url: 'https://github.com/xguot', icon: 'github' },
 		{ name: 'LinkedIn', url: 'https://linkedin.com/in/xiyuan-tommy-guo', icon: 'linkedin' },
-		{ name: 'Email', url: 'mailto:tommyguo024@outlook.com', icon: 'mail' }
+		{ name: 'Email', url: 'mailto:mhn4xq@virginia.edu', icon: 'mail' }
 	];
 </script>
 
@@ -13,7 +13,7 @@
 				href={link.url}
 				target="_blank"
 				rel="noreferrer"
-				class="text-slate hover:text-green block transition-colors duration-300"
+				class="text-cloud-dim hover:text-reze block transition-colors duration-300"
 				aria-label={link.name}
 			>
 				<svg

@@ -32,15 +32,20 @@
 			class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-4/12 lg:flex-col lg:justify-between lg:py-24"
 		>
 			<div>
+				<img
+					src="/profile.jpg"
+					alt="Xiyuan (Tommy) Guo"
+					class="mb-6 size-24 rounded-full border-2 border-reze/40 object-cover shadow-lg sm:size-28"
+				/>
 				<h1 class="text-cloud text-4xl font-bold tracking-tight sm:text-5xl">
 					<a href="/">Xiyuan (Tommy) Guo</a>
 				</h1>
 				<h2 class="text-cloud-dim mt-3 text-lg font-medium tracking-tight sm:text-xl">
-					Systems | Software Engineer
+					Quantum Computing Researcher · CS @ UVA
 				</h2>
 				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
-					Architecting high-performance systems and low-latency terminal architecture
-					for power users.
+					Applying convex optimization and GPU-accelerated numerical linear algebra to
+					quantum state reconstruction and quantum materials.
 				</p>
 
 				<nav class="mt-16 hidden lg:block">

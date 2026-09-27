@@ -7,49 +7,55 @@
 		{
 			date: 'APR 2026 — PRESENT',
 			title: 'Research Assistant',
-			company: 'UVA (BAL Lab)',
+			company: 'UVA BAL Lab (Prof. Tong)',
 			description:
-				'Formulating a quantum-inspired psychometric framework utilizing Hilbert-space probability models to map how individuals transition from cognitive uncertainty to commitment across repeated longitudinal measurements. Engineering a multivariate longitudinal missing data imputation framework that enforces the Law of Total Variation, with a custom Lagrange-constrained C++17 gradient descent solver implemented via RcppArmadillo.',
-			skills: ['C++', 'RcppArmadillo', 'Psychometrics', 'Optimization', 'Mathematical Statistics'],
-			link: 'https://xtong.org/'
+				'Engineered PRISM, a constrained optimization framework for multivariate longitudinal missing data imputation: an initial imputation is projected onto the FIML model-implied mean and covariance structure under a regularized objective that counteracts the variance attenuation inherent in unconstrained imputation. Built the solver engine in C++17 (RcppArmadillo) as projected gradient descent with Armijo backtracking line search, exact mean-constraint enforcement via per-column zero-sum gradient projection, and KKT convergence certification.',
+			skills: ['C++17', 'RcppArmadillo', 'Convex Optimization', 'KKT', 'Longitudinal Statistics'],
+			link: 'https://github.com/xguot/prism'
 		},
 		{
 			date: 'FEB 2026 — PRESENT',
 			title: 'Research Assistant',
-			company: 'Yale (Liu\'s Group)',
+			company: "Yale (Liu's Group)",
 			description:
-				'Developing a deep unrolled ADMM framework for blind computational polarimetry, reconstructing the full Stokes polarization cube from single diffuser speckle measurements. Engineering a custom PyTorch U-Net pipeline with rigorous physics-informed constraints using vectorial Stokes parameter representations and Lorentz cone orthogonal projections, yielding 4.5 dB PSNR improvement over baseline methods.',
-			skills: ['PyTorch', 'ADMM', 'Computational Imaging', 'Physics-Informed Neural Networks', 'Polarimetry'],
+				'Engineered a joint spectro-polarimetric forward model recovering a 324-channel scene datacube (spatial × 81 wavelengths × 4 Stokes channels) from a single multiplexed lensless speckle image. Formulated the reconstruction as a conic-constrained inverse problem mathematically isomorphic to quantum state tomography: the Poincaré-Bloch map S ↦ ρ = ½(I + S·σ) sends each Stokes vector to a single-qubit density matrix, and the enforced Lorentz cone constraint S₀ ≥ ‖S₁:₃‖ is precisely the density-matrix positivity condition ρ ⪰ 0. Architected a GPU-accelerated consensus ADMM solver in PyTorch with exact joint proximal operators and closed-form Sherman-Morrison inversions, scaling across SLURM HPC clusters.',
+			skills: ['PyTorch', 'ADMM', 'Quantum State Tomography', 'Convex Optimization', 'HPC'],
 			link: 'https://liu.yale.edu/'
 		},
 		{
 			date: 'OCT 2025 — PRESENT',
 			title: 'Research Assistant',
-			company: 'UVA (Ke\'s Group)',
+			company: "UVA (Ke's Group)",
 			description:
-				'Applying quantum mechanics principles to engineer Density Functional Theory (DFT) and Dynamical Mean-Field Theory (DMFT) reconstruction algorithms for frontier rare-earth materials research. Architecting a cloud-native ML pipeline using Go and Next.js backed by DOE-BES and DOE-ARPA-E funding, and creating immersive browser-based 3D atomic visualizations with Three.js and JSmol.',
-			skills: ['Go', 'Next.js', 'DFT', 'Three.js', 'Quantum Mechanics', 'Machine Learning'],
+				'Applied Density Functional Theory (DFT) to investigate transition-metal magnetic anisotropy and its relationship to structural motifs. Created immersive browser-based 3D atomic visualizations with Three.js and JSmol, and engineered a cloud-native machine learning pipeline in Go and Next.js for secure dataset sharing across collaborators. Designing RareEarth DB, a rare-earth-focused analogue of the Materials Project: a MongoDB document architecture linking 4,648 curated magnetic-anisotropy measurements to ICSD/Pearson crystal structures, with a schema designed for Fireworks-orchestrated DFT workflows on UVA HPC; DOE funding proposal in preparation.',
+			skills: ['DFT', 'MongoDB', 'Fireworks', 'Go', 'Three.js', 'Quantum Materials'],
 			link: 'https://www.virginia.edu/'
 		},
 		{
-			date: 'MAY 2026 — PRESENT',
+			date: 'MAY 2026 — AUG 2026',
 			title: 'Research Intern',
 			company: 'UVA Biocomplexity Institute',
 			description:
-				'Formulating massive-scale network simulations modeling stochastic viral pathogen spread via SEIR compartmental cascade models. Engineering attention-based Graph Neural Network (GNN) architectures to predict multi-hop epidemic propagation using spatiotemporal message-passing frameworks on HPC infrastructure.',
-			skills: ['GNN', 'Network Science', 'Simulation', 'Bayesian Data Science', 'HPC'],
+				'Formulated massive-scale network simulations modeling the stochastic spread of viral pathogens, implementing SEIR compartmental cascade models to capture heterogeneous transmission dynamics. Engineered Graph Neural Network (GNN) architectures utilizing spatiotemporal message-passing frameworks to extract predictive topological features from dynamic contact networks.',
+			skills: ['GNN', 'Network Science', 'Simulation', 'SEIR', 'Python'],
 			link: 'https://biocomplexity.virginia.edu/'
 		}
 	];
 
 	const projects = [
 		{
-			title: 'smriti — Longitudinal Imputation Engine',
+			title: 'lensless-recon — Conic-Constrained QST Solver',
 			description:
-				'An R package for automated longitudinal missing data imputation. Executes a three-phase architecture combining missForest initialization with a custom C++ Lagrangian projection engine to strictly preserve the structural variance of the target covariance manifold.',
-			tags: ['R', 'C++', 'RcppArmadillo', 'Statistics', 'CRAN'],
-			link: 'https://github.com/xguot/smriti',
-			thumbnail: '/statue-demo.gif'
+				'GPU-accelerated consensus ADMM solver in PyTorch recovering a 324-channel spectro-polarimetric datacube from a single lensless speckle image. The conic-constrained inverse problem is isomorphic to quantum state tomography via the Poincaré-Bloch map, with the Lorentz cone constraint enforcing density-matrix positivity. Exact joint proximal operators and Sherman-Morrison closed-form inversions scale across SLURM HPC clusters.',
+			tags: ['PyTorch', 'ADMM', 'QST', 'Lorentz Cone', 'HPC'],
+			link: 'https://github.com/xguot/lensless-recon'
+		},
+		{
+			title: 'prism — Projected Gradient Imputation Engine',
+			description:
+				'A C++17 (RcppArmadillo) solver for multivariate longitudinal missing data imputation. Projected gradient descent with Armijo backtracking projects the imputation onto the FIML model-implied mean and covariance structure, with per-column zero-sum gradient projection enforcing mean constraints and KKT certification at every iterate.',
+			tags: ['C++17', 'RcppArmadillo', 'Convex Optimization', 'KKT', 'Statistics'],
+			link: 'https://github.com/xguot/prism'
 		},
 		{
 			title: 'difi — Git Diff Review Tool',
@@ -59,8 +65,15 @@
 			link: 'https://github.com/xguot/difi',
 			stars: 342,
 			thumbnail: '/difi-demo.gif',
-			hnRanking: 6,
+			hnRanking: 5,
 			hnLink: 'https://news.ycombinator.com/item?id=46870917'
+		},
+		{
+			title: 'stim — Quantum Circuit Simulator Contributor',
+			description:
+				'Authored a pull request to stim, the high-performance stabilizer circuit simulator used across the quantum error correction community, contributing to circuit rendering and execution frameworks.',
+			tags: ['Quantum Computing', 'Stabilizer Circuits', 'C++', 'Open Source'],
+			link: 'https://github.com/quantumlib/stim'
 		},
 		{
 			title: 'sanjaya — Academic Graph Pipeline',
@@ -118,21 +131,25 @@
 	aria-label="About me"
 >
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		I’m a software engineer focused on the intersection of
-		<span class="text-cloud font-medium">quantitative finance</span> and
-		<span class="text-cloud font-medium">distributed systems</span>. I specialize in building
-		high-performance <span class="text-cloud font-medium">Svelte</span> applications that bridge the gap
-		between complex backend logic and intuitive, low-latency user interfaces.
+		I’m a Computer Science major at the University of Virginia pursuing research at the
+		intersection of <span class="text-cloud font-medium">quantum information</span> and
+		<span class="text-cloud font-medium">computational imaging</span>. My work spans quantum
+		state tomography (QST), conic-constrained convex optimization, and
+		<span class="text-cloud font-medium">density functional theory (DFT)</span> —
+		bridging rigorous theory with GPU-accelerated numerical implementations.
 	</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		Currently, I am focused on architecting terminal-centric tooling and reactive web systems,
-		notably as the creator of <span class="text-cloud font-medium">difi</span> and
-		<span class="text-cloud font-medium">zsweep</span> (HN #5 & #6). Beyond my own projects, I am an
-		<span class="text-cloud font-medium">Open Source Contributor</span>
-		to Neovim and Statue. I’m also deep-diving into market microstructure—working through
-		<span class="text-cloud font-medium">The Green Book</span> to apply systems engineering rigor to quantitative
-		finance.
+		Currently, I am reconstructing 324-channel spectro-polarimetric datacubes from single
+		lensless speckle images with a conic-constrained ADMM solver, a problem formally
+		isomorphic to QST via the
+		<span class="text-cloud font-medium">Poincaré-Bloch map</span>. In parallel, I built
+		<span class="text-cloud font-medium">PRISM</span>, a C++17 projected gradient descent
+		engine with KKT convergence certification for longitudinal missing data imputation, and I
+		am designing <span class="text-cloud font-medium">RareEarth DB</span>, a MongoDB-backed
+		materials database with Fireworks-orchestrated DFT workflows on UVA HPC. I also contribute
+		to <span class="text-cloud font-medium">stim</span>, the open-source quantum circuit
+		simulator.
 	</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
@@ -140,8 +157,8 @@
 		<span class="text-cloud font-medium">Muay Thai</span> gym, training calisthenics, or behind a
 		drum kit. I’m an avid off-roader in my
 		<span class="text-cloud font-medium">Tacoma TRD Pro</span>
-		and a heavy consumer of specialty coffee. I am currently completing my double major in Physics
-		and Computer Science (Expected May 2028) at the
+		and a heavy consumer of specialty coffee. I am currently completing my B.A. in Computer
+		Science (Expected May 2027) at the
 		<span class="text-cloud font-medium">University of Virginia</span>.
 	</p>
 </section>
