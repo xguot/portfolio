@@ -34,6 +34,8 @@
 	--font-mono: 'Fira Code', monospace;
 
 	--animate-sway: sway 0.9s ease-in-out infinite;
+	--animate-qm-pulse: qm-pulse 3s ease-out infinite;
+	--animate-qm-ring: qm-ring 3s ease-out infinite;
 }
 
 /* Night theme: total black, brighter text, mint green glow */
