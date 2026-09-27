@@ -36,11 +36,13 @@
 			class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-4/12 lg:flex-col lg:justify-between lg:py-24"
 		>
 			<div>
-				<img
-					src="/profile.jpg"
-					alt="Xiyuan (Tommy) Guo"
-					class="mb-6 size-24 rounded-full border-2 border-reze/40 object-cover shadow-lg sm:size-28"
-				/>
+				<a href="/uncles.JPG" target="_blank" rel="noreferrer">
+					<img
+						src="/profile.jpg"
+						alt="Xiyuan (Tommy) Guo"
+						class="mb-6 size-24 rounded-full border-2 border-reze/40 object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:size-28"
+					/>
+				</a>
 				<h1 class="text-cloud text-4xl font-bold tracking-tight sm:text-5xl">
 					<a href="/">Xiyuan (Tommy) Guo</a>
 				</h1>
