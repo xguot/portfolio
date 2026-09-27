@@ -272,11 +272,7 @@
 		</button>
 
 		<p class="text-cloud-dim/60 max-w-md text-sm leading-normal">
-			Typed on an <span class="text-cloud-dim">HHKB</span> with joy in
-			<span class="text-cloud-dim">MacVim</span>, built using
-			<span class="text-cloud-dim">SvelteKit</span> and
-			<span class="text-cloud-dim">Tailwind CSS</span> with assistance from
-			<span class="text-cloud-dim">Codewhale</span>.
+			Code with joy using <span class="text-cloud-dim">Svelte</span>.
 		</p>
 	</div>
 </section>
