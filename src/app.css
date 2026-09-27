@@ -34,8 +34,6 @@
 	--font-mono: 'Fira Code', monospace;
 
 	--animate-sway: sway 0.9s ease-in-out infinite;
-	--animate-qm-pulse: qm-pulse 3s ease-out infinite;
-	--animate-qm-ring: qm-ring 3s ease-out infinite;
 }
 
 /* Night theme: total black, brighter text, mint green glow */
@@ -49,6 +47,7 @@
 	--color-reze: #4ade9b;
 	--color-reze-dim: rgba(74, 222, 155, 0.1);
 
+	--glow: rgba(134, 239, 172, 0.12);
 	--scrollbar-thumb: #1d2a22;
 
 	color-scheme: dark;

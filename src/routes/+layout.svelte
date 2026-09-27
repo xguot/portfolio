@@ -24,20 +24,10 @@
 	style="transform: translate({mouseX}px, {mouseY}px);"
 	aria-hidden="true"
 >
-	<div class="absolute -translate-x-1/2 -translate-y-1/2">
-		<span
-			class="bg-reze absolute -top-3 -left-3 block size-6 rounded-full blur-sm motion-safe:animate-qm-pulse"
-			aria-hidden="true"
-		></span>
-		<span
-			class="border-reze absolute -top-2.5 -left-2.5 block size-5 rounded-full border motion-safe:animate-qm-ring"
-			aria-hidden="true"
-		></span>
-		<span
-			class="bg-cloud absolute -top-0.5 -left-0.5 block h-1 w-1 rounded-full"
-			style="opacity: 0.18"
-		></span>
-	</div>
+	<div
+		class="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
+		style="width: 380px; height: 380px; background: radial-gradient(circle, var(--glow), transparent 65%);"
+	></div>
 </div>
 
 <div class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
