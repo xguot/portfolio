@@ -45,7 +45,7 @@
 					<a href="/">Xiyuan (Tommy) Guo</a>
 				</h1>
 				<h2 class="text-cloud-dim mt-3 text-lg font-medium tracking-tight sm:text-xl">
-					Quantum Computing Researcher · CS @ UVA
+					Undergraduate Researcher · Quantum Computing · CS @ UVA
 				</h2>
 				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
 					Applying convex optimization and GPU-accelerated numerical linear algebra to

@@ -152,8 +152,8 @@
 	</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		Away from the terminal I’m at the
-		<span class="text-cloud font-medium">Muay Thai</span> gym or hanging out with my
+		Away from the keyboard I do
+		<span class="text-cloud font-medium">Muay Thai</span> and hang out with my
 		<span class="text-cloud font-medium">Sheltie</span>. I’m completing my B.A. in Computer
 		Science (Expected May 2027) at the
 		<span class="text-cloud font-medium">University of Virginia</span>.
