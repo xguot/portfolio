@@ -272,14 +272,12 @@
 		</button>
 
 		<p class="text-cloud-dim/60 max-w-md text-sm leading-normal">
-			Loosely designed in <span class="text-cloud-dim">Figma</span> and engineered in
-			<span class="text-cloud-dim">Neovim</span> on an
-			<span class="text-cloud-dim">HHKB</span>. Built with
+			Engineered in <span class="text-cloud-dim">Neovim</span> on an
+			<span class="text-cloud-dim">HHKB</span> with assistance from
+			<span class="text-cloud-dim">Codewhale</span>. Built with
 			<span class="text-cloud-dim">SvelteKit</span>
 			and
-			<span class="text-cloud-dim">Tailwind CSS</span>, reviewed with
-			<span class="text-cloud-dim">difi</span>, and deployed with
-			<span class="text-cloud-dim">Vercel</span>.
+			<span class="text-cloud-dim">Tailwind CSS</span>.
 		</p>
 	</div>
 </section>
