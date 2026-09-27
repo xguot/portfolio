@@ -18,18 +18,6 @@
 	}
 }
 
-@keyframes twinkle {
-	0%,
-	100% {
-		opacity: 0.25;
-		transform: scale(0.7);
-	}
-	50% {
-		opacity: 1;
-		transform: scale(1.1);
-	}
-}
-
 @theme {
 	/* Day theme: white with teal/mint accents */
 	--color-bg-main: #fdfefd;
@@ -46,7 +34,6 @@
 	--font-mono: 'Fira Code', monospace;
 
 	--animate-sway: sway 0.9s ease-in-out infinite;
-	--animate-twinkle: twinkle 2.4s ease-in-out infinite;
 }
 
 /* Night theme: total black, brighter text, mint green glow */
