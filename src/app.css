@@ -47,8 +47,8 @@
 	--color-reze: #4ade9b;
 	--color-reze-dim: rgba(74, 222, 155, 0.1);
 
-	--glow: rgba(74, 222, 155, 0.14);
-	--glow-size: 260px;
+	--glow: rgba(236, 250, 244, 0.05);
+	--glow-size: 170px;
 	--scrollbar-thumb: #1d2a22;
 
 	color-scheme: dark;
