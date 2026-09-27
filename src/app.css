@@ -18,6 +18,29 @@
 	}
 }
 
+@keyframes photon {
+	0% {
+		transform: scale(0.4);
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(2.6);
+		opacity: 0;
+	}
+}
+
+@keyframes photon-delayed {
+	0%,
+	45% {
+		transform: scale(0.4);
+		opacity: 0.9;
+	}
+	100% {
+		transform: scale(2.6);
+		opacity: 0;
+	}
+}
+
 @theme {
 	/* Day theme: white with teal/mint accents */
 	--color-bg-main: #fdfefd;
@@ -34,22 +57,24 @@
 	--font-mono: 'Fira Code', monospace;
 
 	--animate-sway: sway 0.9s ease-in-out infinite;
+	--animate-photon: photon 1.2s ease-out infinite;
+	--animate-photon-delayed: photon-delayed 1.2s ease-out infinite;
 }
 
-/* Night theme: total dark, exact inversion of the day theme, mint accents */
+/* Night theme: total dark, brighter text, mint green glow */
 .dark {
-	--color-bg-main: #060806;
-	--color-bg-card: #0d120d;
+	--color-bg-main: #020402;
+	--color-bg-card: #0b110d;
 
-	--color-cloud: #d7efe8;
-	--color-cloud-dim: #7d9a90;
+	--color-cloud: #ecfaf4;
+	--color-cloud-dim: #93aca1;
 
 	--color-reze: #4ade9b;
 	--color-reze-dim: rgba(74, 222, 155, 0.1);
 
-	--glow: rgba(74, 222, 155, 0.1);
-	--glow-strong: rgba(74, 222, 155, 0.14);
-	--scrollbar-thumb: #22302a;
+	--glow: rgba(74, 222, 155, 0.14);
+	--glow-size: 260px;
+	--scrollbar-thumb: #1d2a22;
 
 	color-scheme: dark;
 }
@@ -57,7 +82,7 @@
 /* Theme-aware glows used by inline radial gradients */
 :root {
 	--glow: rgba(45, 212, 191, 0.16);
-	--glow-strong: rgba(45, 212, 191, 0.22);
+	--glow-size: 600px;
 	--scrollbar-bg: var(--color-bg-main);
 	--scrollbar-thumb: #cbd9d5;
 }
