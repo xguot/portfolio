@@ -15,9 +15,20 @@
 <svelte:window on:mousemove={handleMouseMove} />
 
 <div
-	class="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
-	style="background: radial-gradient(var(--glow-size) at {mouseX}px {mouseY}px, var(--glow), transparent 80%);"
+	class="pointer-events-none fixed inset-0 z-30 dark:hidden"
+	style="background: radial-gradient(600px at {mouseX}px {mouseY}px, var(--glow), transparent 80%);"
 ></div>
+
+<div
+	class="pointer-events-none fixed top-0 left-0 z-30 hidden dark:block"
+	style="transform: translate({mouseX}px, {mouseY}px);"
+	aria-hidden="true"
+>
+	<span
+		class="absolute -top-0.5 -left-0.5 block h-1 w-1 rounded-full bg-cloud"
+		style="opacity: 0.18; box-shadow: 0 0 10px 3px var(--color-reze);"
+	></span>
+</div>
 
 <div class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
 	<div class="lg:flex lg:justify-between lg:gap-4">
