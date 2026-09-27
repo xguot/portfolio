@@ -2,10 +2,10 @@
 	import { onMount } from 'svelte';
 
 	let theme = $state('light');
-	let showLabel = $state(false);
-	let labelTimer: ReturnType<typeof setTimeout> | undefined;
+	let pulled = $state(false);
+	let timer: ReturnType<typeof setTimeout> | undefined;
 
-	const themeColors: Record<string, string> = { light: '#fdfefd', dark: '#101018' };
+	const themeColors: Record<string, string> = { light: '#fdfefd', dark: '#060806' };
 
 	function applyTheme(next: string, persist = false) {
 		theme = next;
@@ -23,66 +23,61 @@
 
 	function toggle() {
 		applyTheme(theme === 'dark' ? 'light' : 'dark', true);
-	}
-
-	function handlePull() {
-		toggle();
-		clearTimeout(labelTimer);
-		showLabel = true;
-		labelTimer = setTimeout(() => {
-			showLabel = false;
-		}, 900);
+		pulled = true;
+		clearTimeout(timer);
+		timer = setTimeout(() => (pulled = false), 450);
 	}
 </script>
 
-<div class="pointer-events-none fixed right-4 bottom-4 z-40 sm:right-6 lg:top-4 lg:right-8 lg:bottom-auto">
-	<div class="pointer-events-auto flex flex-col items-center">
-		<div aria-hidden="true" class="h-10 w-px bg-reze/30 transition-colors duration-300 sm:h-12"></div>
-		<div class="relative -translate-y-1">
-			<span
-				class="bg-reze-dim/60 border-cloud/15 absolute inset-0 m-auto block size-9 rounded-full blur-xl transition-colors duration-500"
-				aria-hidden="true"
-			></span>
-			<span
-				aria-hidden="true"
-				class="text-reze/60 absolute inset-0 m-auto flex size-9 animate-pulse items-center justify-center rounded-full border-2 border-transparent"
-			></span>
-			<button
-				type="button"
-				onclick={handlePull}
-				aria-pressed={theme === 'dark'}
-				aria-label={theme === 'dark' ? 'Switch to day theme' : 'Switch to night theme'}
-				title="Pull to change theme"
-				class="group relative flex size-11 cursor-pointer flex-col items-center rounded-full border-2 border-cloud/15 bg-bg-card shadow-lg transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-reze sm:size-12"
-			>
-				<span
-					class="bg-cloud/30 absolute top-2 h-2 w-2 rounded-full transition-colors duration-300"
-					aria-hidden="true"
-				></span>
-				<span
-					class="text-reze absolute top-4.5 text-[10px] leading-none transition-colors duration-300"
-					aria-hidden="true"
-				>
-					{theme === 'dark' ? '◐' : '◑'}
-				</span>
-				<span
-					class="border-cloud/15 absolute -bottom-5 h-4 w-px border-l transition-colors duration-300"
-					aria-hidden="true"
-				></span>
-				<span
-					class="bg-cloud-dim group-hover:bg-reze absolute -bottom-8 h-3 w-2.5 rounded-b-full transition-all duration-300 group-hover:-bottom-9"
-					aria-hidden="true"
-				></span>
-			</button>
-		</div>
+<div
+	class="fixed top-0 right-6 z-40 flex flex-col items-center transition-transform duration-300 ease-out {pulled
+		? '-translate-y-2'
+		: ''}"
+>
+	<div class="bg-cloud/25 h-7 w-px sm:h-9" aria-hidden="true"></div>
 
+	<button
+		type="button"
+		onclick={toggle}
+		aria-pressed={theme === 'dark'}
+		aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+		class="group relative flex size-10 cursor-pointer items-center justify-center rounded-full border border-cloud/15 bg-bg-card shadow-md transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-reze motion-safe:group-hover:animate-pull-sway motion-reduce:transition-none sm:size-11"
+	>
 		<span
-			class="text-cloud-dim bg-bg-card/80 border-cloud/10 text-[11px] rounded-full border px-2.5 py-1 whitespace-nowrap shadow-sm transition-opacity duration-300 {showLabel
+			class="absolute inset-0 rounded-full blur-md transition-opacity duration-300 {theme === 'dark'
+				? 'bg-reze/25 opacity-100'
+				: 'bg-amber-300/20 opacity-100'}"
+			aria-hidden="true"
+		></span>
+		<span
+			class="absolute inset-0 rounded-full border border-reze/30 transition-opacity duration-300 {theme === 'dark'
 				? 'opacity-100'
 				: 'opacity-0'}"
-			aria-live="polite"
+			aria-hidden="true"
+		></span>
+
+		<svg
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.8"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="relative size-4.5 {theme === 'dark' ? 'text-reze' : 'text-amber-500'}"
+			aria-hidden="true"
 		>
-			{theme === 'dark' ? 'Night' : 'Day'}
-		</span>
-	</div>
+			{#if theme === 'dark'}
+				<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+			{:else}
+				<circle cx="12" cy="12" r="4.5"></circle>
+				<path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6"></path>
+			{/if}
+		</svg>
+	</button>
+
+	<div class="bg-cloud/25 h-4 w-px" aria-hidden="true"></div>
+	<div
+		class="bg-cloud/40 h-1.5 w-1.5 rounded-full"
+		aria-hidden="true"
+	></div>
 </div>

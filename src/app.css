@@ -2,6 +2,22 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@keyframes sway {
+	0%,
+	100% {
+		transform: translateX(0) rotate(0deg);
+	}
+	30% {
+		transform: translateX(1.5px) rotate(5deg);
+	}
+	60% {
+		transform: translateX(-1.5px) rotate(-5deg);
+	}
+	80% {
+		transform: translateX(0.75px) rotate(2deg);
+	}
+}
+
 @theme {
 	/* Day theme: white with teal/mint accents */
 	--color-bg-main: #fdfefd;
@@ -16,22 +32,24 @@
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, sans-serif;
 	--font-mono: 'Fira Code', monospace;
+
+	--animate-sway: sway 0.9s ease-in-out infinite;
 }
 
-/* Night theme: clean dark with light purple */
+/* Night theme: total dark, exact inversion of the day theme, mint accents */
 .dark {
-	--color-bg-main: #101018;
-	--color-bg-card: #1a1a25;
+	--color-bg-main: #060806;
+	--color-bg-card: #0d120d;
 
-	--color-cloud: #f0eee9;
-	--color-cloud-dim: #94949e;
+	--color-cloud: #d7efe8;
+	--color-cloud-dim: #7d9a90;
 
-	--color-reze: #b392f0;
-	--color-reze-dim: rgba(179, 146, 240, 0.1);
+	--color-reze: #4ade9b;
+	--color-reze-dim: rgba(74, 222, 155, 0.1);
 
-	--glow: rgba(179, 146, 240, 0.16);
-	--glow-strong: rgba(179, 146, 240, 0.2);
-	--scrollbar-thumb: #2d2d3a;
+	--glow: rgba(74, 222, 155, 0.1);
+	--glow-strong: rgba(74, 222, 155, 0.14);
+	--scrollbar-thumb: #22302a;
 
 	color-scheme: dark;
 }
