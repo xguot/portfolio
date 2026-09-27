@@ -48,7 +48,8 @@
 					Undergraduate Researcher · Quantum Computing · CS @ UVA
 				</h2>
 				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
-					A CS student who fancies quantum.
+					A CS student who fancies quantum
+					<span class="text-reze ml-1 font-mono italic">ψ</span>
 				</p>
 
 				<nav class="mt-16 hidden lg:block">
