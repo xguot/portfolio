@@ -80,7 +80,15 @@
 			description:
 				'An automated academic literature extraction pipeline utilizing the OpenAlex Academic Graph API, Scrapy, and Playwright. Extracts bilingual data and exports structured CSV/JSON datasets for downstream interdisciplinary research applications.',
 			tags: ['Python', 'Scrapy', 'Playwright', 'Data Engineering', 'Academic Graph'],
-			link: 'https://github.com/xguot/sanjaya',
+			link: 'https://sanjaya-six.vercel.app/',
+			thumbnail: '/sanjaya.png'
+		},
+		{
+			title: 'zsweep — Minesweeper with Vim Motions',
+			description:
+				'A terminal-based Minesweeper built around Vim-style keyboard motion — sweep the board with hjkl and marks, no mouse required.',
+			tags: ['Go', 'TUI', 'Vim Motions', 'CLI'],
+			link: 'https://zsweep.com',
 			thumbnail: '/zsweep-demo.gif'
 		},
 		{
