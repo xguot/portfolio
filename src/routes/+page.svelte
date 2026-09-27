@@ -139,33 +139,22 @@
 	aria-label="About me"
 >
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		I’m a Computer Science major at the University of Virginia pursuing research at the
-		intersection of <span class="text-cloud font-medium">quantum information</span> and
-		<span class="text-cloud font-medium">computational imaging</span>. My work spans quantum
-		state tomography (QST), conic-constrained convex optimization, and
-		<span class="text-cloud font-medium">density functional theory (DFT)</span> —
-		bridging rigorous theory with GPU-accelerated numerical implementations.
-	</p>
-
-	<p class="text-cloud-dim mb-4 leading-relaxed">
-		Currently, I am reconstructing 324-channel spectro-polarimetric datacubes from single
-		lensless speckle images with a conic-constrained ADMM solver, a problem formally
-		isomorphic to QST via the
-		<span class="text-cloud font-medium">Poincaré-Bloch map</span>. In parallel, I built
+		I’m a CS undergrad at UVA working at the intersection of
+		<span class="text-cloud font-medium">quantum information</span> and
+		<span class="text-cloud font-medium">computational imaging</span>: reconstructing
+		spectro-polarimetric datacubes from lensless speckle images with a conic-constrained ADMM
+		solver — a problem formally isomorphic to quantum state tomography via the
+		<span class="text-cloud font-medium">Poincaré-Bloch map</span> — plus
 		<span class="text-cloud font-medium">PRISM</span>, a C++17 projected gradient descent
-		engine with KKT convergence certification for longitudinal missing data imputation, and I
-		am designing <span class="text-cloud font-medium">RareEarth DB</span>, a MongoDB-backed
-		materials database with Fireworks-orchestrated DFT workflows on UVA HPC. I also contribute
-		to <span class="text-cloud font-medium">stim</span>, the open-source quantum circuit
-		simulator.
+		engine, and <span class="text-cloud font-medium">RareEarth DB</span>, a MongoDB-backed
+		materials database with Fireworks DFT workflows on UVA HPC. I also contribute to
+		<span class="text-cloud font-medium">stim</span>, the quantum circuit simulator.
 	</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		When I’m not at the terminal, you can usually find me at the
-		<span class="text-cloud font-medium">Muay Thai</span> gym, training calisthenics, or behind a
-		drum kit. I’m an avid off-roader in my
-		<span class="text-cloud font-medium">Tacoma TRD Pro</span>
-		and a heavy consumer of specialty coffee. I am currently completing my B.A. in Computer
+		Away from the terminal I’m at the
+		<span class="text-cloud font-medium">Muay Thai</span> gym or hanging out with my
+		<span class="text-cloud font-medium">Sheltie</span>. I’m completing my B.A. in Computer
 		Science (Expected May 2027) at the
 		<span class="text-cloud font-medium">University of Virginia</span>.
 	</p>
