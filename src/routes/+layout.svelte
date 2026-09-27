@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import Socials from '$lib/components/Socials.svelte';
+	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
@@ -22,7 +23,7 @@
 
 <div
 	class="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
-	style="background: radial-gradient(600px at {mouseX}px {mouseY}px, rgba(179, 146, 240, 0.08), transparent 80%);"
+	style="background: radial-gradient(600px at {mouseX}px {mouseY}px, var(--glow), transparent 80%);"
 ></div>
 
 <div class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -69,3 +70,5 @@
 		</main>
 	</div>
 </div>
+
+<ThemeSwitch />

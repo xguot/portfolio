@@ -40,7 +40,7 @@
 			style="
                 background: radial-gradient(
                     600px circle at {mouseX}px {mouseY}px,
-                    rgba(179, 146, 240, 0.08), 
+                    var(--glow-strong),
                     transparent 40%
                 );
             "

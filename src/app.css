@@ -1,38 +1,71 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+	/* Day theme: white with teal/mint accents */
+	--color-bg-main: #fdfefd;
+	--color-bg-card: #ffffff;
 
-	--color-bg-main: #0f0f16;
-	--color-bg-card: #1a1a23; /* Slightly lighter for cards */
+	--color-cloud: #12322e;
+	--color-cloud-dim: #4e6b66;
 
-	--color-cloud: #f0eee9;
-	--color-cloud-dim: #94949e; /* Muted version for secondary text */
-
-	--color-reze: #b392f0;
-	--color-reze-dim: rgba(179, 146, 240, 0.1); /* Low opacity for backgrounds */
+	--color-reze: #0d9488;
+	--color-reze-dim: rgba(13, 148, 136, 0.1);
 
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, sans-serif;
 	--font-mono: 'Fira Code', monospace;
 }
 
-/* Global Styles */
-:root {
-	--scrollbar-bg: var(--color-bg-main);
+/* Night theme: clean dark with light purple */
+.dark {
+	--color-bg-main: #101018;
+	--color-bg-card: #1a1a25;
+
+	--color-cloud: #f0eee9;
+	--color-cloud-dim: #94949e;
+
+	--color-reze: #b392f0;
+	--color-reze-dim: rgba(179, 146, 240, 0.1);
+
+	--glow: rgba(179, 146, 240, 0.16);
+	--glow-strong: rgba(179, 146, 240, 0.2);
 	--scrollbar-thumb: #2d2d3a;
+
+	color-scheme: dark;
 }
 
+/* Theme-aware glows used by inline radial gradients */
+:root {
+	--glow: rgba(45, 212, 191, 0.16);
+	--glow-strong: rgba(45, 212, 191, 0.22);
+	--scrollbar-bg: var(--color-bg-main);
+	--scrollbar-thumb: #cbd9d5;
+}
+
+/* Global Styles */
 body {
+	color-scheme: light;
 	background-color: var(--color-bg-main);
 	color: var(--color-cloud);
 	font-family: var(--font-sans);
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	transition:
+		background-color 0.35s ease,
+		color 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+		transition: none;
+	}
 }
 
 ::selection {
 	background-color: var(--color-reze);
-	color: var(--color-bg-main); /* Black text on purple highlight */
+	color: var(--color-bg-main);
 }
 
 /* Scrollbar Customization */

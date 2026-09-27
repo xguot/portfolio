@@ -4,7 +4,19 @@
 		<meta charset="utf-8">
 		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg">
 		<meta name="viewport" content="width=device-width">
+		<meta name="theme-color" content="#fdfefd">
 		<title>Xiyuan (Tommy) Guo | Software Engineer</title>
+		<script>
+			(function () {
+				var stored = localStorage.getItem('theme');
+				var dark = stored
+					? stored === 'dark'
+					: window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (dark) document.documentElement.classList.add('dark');
+				var meta = document.querySelector('meta[name="theme-color"]');
+				if (meta) meta.setAttribute('content', dark ? '#101018' : '#fdfefd');
+			})();
+		</script>
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

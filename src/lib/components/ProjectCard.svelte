@@ -34,7 +34,7 @@
 >
 	<div
 		class="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
-		style="background: radial-gradient(600px circle at {mouseX}px {mouseY}px, rgba(179, 146, 240, 0.1), transparent 40%); opacity: {opacity};"
+		style="background: radial-gradient(600px circle at {mouseX}px {mouseY}px, var(--glow-strong), transparent 40%); opacity: {opacity};"
 	></div>
 
 	<a
