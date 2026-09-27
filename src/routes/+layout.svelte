@@ -48,8 +48,7 @@
 					Undergraduate Researcher · Quantum Computing · CS @ UVA
 				</h2>
 				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
-					Applying convex optimization and GPU-accelerated numerical linear algebra to
-					quantum state reconstruction and quantum materials.
+					Convex optimization for quantum information and quantum materials.
 				</p>
 
 				<nav class="mt-16 hidden lg:block">
