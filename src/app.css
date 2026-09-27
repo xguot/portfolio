@@ -18,26 +18,15 @@
 	}
 }
 
-@keyframes photon {
-	0% {
-		transform: scale(0.4);
-		opacity: 0.9;
-	}
-	100% {
-		transform: scale(2.6);
-		opacity: 0;
-	}
-}
-
-@keyframes photon-delayed {
+@keyframes twinkle {
 	0%,
-	45% {
-		transform: scale(0.4);
-		opacity: 0.9;
-	}
 	100% {
-		transform: scale(2.6);
-		opacity: 0;
+		opacity: 0.25;
+		transform: scale(0.7);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.1);
 	}
 }
 
@@ -57,13 +46,12 @@
 	--font-mono: 'Fira Code', monospace;
 
 	--animate-sway: sway 0.9s ease-in-out infinite;
-	--animate-photon: photon 1.2s ease-out infinite;
-	--animate-photon-delayed: photon-delayed 1.2s ease-out infinite;
+	--animate-twinkle: twinkle 2.4s ease-in-out infinite;
 }
 
-/* Night theme: total dark, brighter text, mint green glow */
+/* Night theme: total black, brighter text, mint green glow */
 .dark {
-	--color-bg-main: #020402;
+	--color-bg-main: #000000;
 	--color-bg-card: #0b110d;
 
 	--color-cloud: #ecfaf4;

@@ -3,11 +3,9 @@
 
 	let theme = $state('light');
 	let pulled = $state(false);
-	let quantum = $state(false);
 	let timer: ReturnType<typeof setTimeout> | undefined;
-	let recentPulls: number[] = [];
 
-	const themeColors: Record<string, string> = { light: '#fdfefd', dark: '#020402' };
+	const themeColors: Record<string, string> = { light: '#fdfefd', dark: '#000000' };
 
 	function applyTheme(next: string, persist = false) {
 		theme = next;
@@ -28,15 +26,6 @@
 		pulled = true;
 		clearTimeout(timer);
 		timer = setTimeout(() => (pulled = false), 450);
-
-		const now = Date.now();
-		recentPulls = recentPulls.filter((t) => now - t < 1600);
-		recentPulls.push(now);
-		if (recentPulls.length >= 3) {
-			recentPulls = [];
-			quantum = true;
-			setTimeout(() => (quantum = false), 1500);
-		}
 	}
 </script>
 
@@ -48,29 +37,6 @@
 	<div class="bg-cloud/25 h-7 w-px sm:h-9" aria-hidden="true"></div>
 
 	<div class="relative">
-		{#if quantum}
-			<span
-				class="bg-reze/40 absolute -inset-3 rounded-full motion-safe:animate-photon"
-				aria-hidden="true"
-			></span>
-			<span
-				class="bg-reze/30 absolute -inset-3 rounded-full motion-safe:animate-photon-delayed"
-				aria-hidden="true"
-			></span>
-			<span
-				class="absolute -top-4 -left-2 font-mono text-xs text-reze/80"
-				aria-hidden="true"
-			>
-				ψ
-			</span>
-			<span
-				class="text-reze/70 absolute -top-5 left-6 font-mono text-[10px]"
-				aria-hidden="true"
-			>
-				E = hν
-			</span>
-		{/if}
-
 		<button
 			type="button"
 			onclick={toggle}
