@@ -272,12 +272,11 @@
 		</button>
 
 		<p class="text-cloud-dim/60 max-w-md text-sm leading-normal">
-			Engineered in <span class="text-cloud-dim">MacVim</span> on an
-			<span class="text-cloud-dim">HHKB</span> with assistance from
-			<span class="text-cloud-dim">Codewhale</span>. Built with
-			<span class="text-cloud-dim">SvelteKit</span>
-			and
-			<span class="text-cloud-dim">Tailwind CSS</span>.
+			Typed on an <span class="text-cloud-dim">HHKB</span> with joy in
+			<span class="text-cloud-dim">MacVim</span>, built using
+			<span class="text-cloud-dim">SvelteKit</span> and
+			<span class="text-cloud-dim">Tailwind CSS</span> with assistance from
+			<span class="text-cloud-dim">Codewhale</span>.
 		</p>
 	</div>
 </section>
