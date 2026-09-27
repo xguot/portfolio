@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import Socials from '$lib/components/Socials.svelte';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
@@ -9,7 +9,7 @@
 	let mouseY = 0;
 	let mounted = false;
 
-	function handleMouseMove(event) {
+	function handleMouseMove(event: MouseEvent) {
 		mouseX = event.clientX;
 		mouseY = event.clientY;
 	}
