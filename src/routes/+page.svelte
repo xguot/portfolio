@@ -272,7 +272,7 @@
 		</button>
 
 		<p class="text-cloud-dim/60 max-w-md text-sm leading-normal">
-			Engineered in <span class="text-cloud-dim">Neovim</span> on an
+			Engineered in <span class="text-cloud-dim">MacVim</span> on an
 			<span class="text-cloud-dim">HHKB</span> with assistance from
 			<span class="text-cloud-dim">Codewhale</span>. Built with
 			<span class="text-cloud-dim">SvelteKit</span>
