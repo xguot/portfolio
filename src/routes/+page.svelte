@@ -159,13 +159,13 @@
 	</div>
 	<div class="mt-12">
 		<a
-			href="/resume.pdf"
+			href="/cv.pdf"
 			target="_blank"
 			rel="noreferrer"
 			class="group text-cloud hover:text-reze inline-flex items-center leading-tight font-semibold transition-colors"
 		>
 			<span class="group-hover:border-reze border-b border-transparent pb-px transition"
-				>View Full Résumé</span
+				>View Full CV</span
 			>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
