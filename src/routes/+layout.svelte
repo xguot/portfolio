@@ -53,7 +53,7 @@
 			class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-4/12 lg:flex-col lg:justify-between lg:py-24"
 		>
 			<div>
-				<a href="/profile.jpg" target="_blank" rel="noreferrer">
+				<a href="/picture.jpg" target="_blank" rel="noreferrer">
 					<img
 						src="/profile.jpg"
 						alt="Xiyuan (Tommy) Guo"
