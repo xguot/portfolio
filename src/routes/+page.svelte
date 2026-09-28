@@ -156,7 +156,8 @@
 	</div>
 	<div class="mt-12">
 		<a
-			href="/cv.pdf"
+			href="/Xiyuan_Guo_CV.pdf"
+			download="Xiyuan_Guo_CV.pdf"
 			target="_blank"
 			rel="noreferrer"
 			class="group text-cloud hover:text-reze inline-flex items-center leading-tight font-semibold transition-colors"
