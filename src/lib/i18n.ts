@@ -56,8 +56,10 @@ const dict: Record<Lang, Dict> = {
 		subtitle: 'Undergraduate Researcher · Quantum Computing · CS @ UVA',
 		about1:
 			"I'm a CS undergrad at UVA working at the intersection of quantum information and computational imaging: reconstructing spectro-polarimetric datacubes from lensless speckle images with a conic-constrained ADMM solver — a problem formally isomorphic to quantum state tomography via the Poincaré-Bloch map — plus PRISM, a C++17 projected gradient descent engine, and RareEarth DB, a MongoDB-backed materials database with Fireworks DFT workflows on UVA HPC. I also contribute to stim, the quantum circuit simulator.",
-		about2:
-			"Away from the keyboard I do Muay Thai and hang out with my Sheltie. I'm completing my B.A. in Computer Science (Expected May 2027) at the University of Virginia.",
+		about2a: 'Away from the keyboard I do Muay Thai and hang out with my ',
+		about2sheltie: 'Sheltie',
+		about2b:
+			". I'm completing my B.A. in Computer Science (Expected May 2027) at the University of Virginia.",
 		sections: {
 			experience: 'Experience',
 			projects: 'Projects',
@@ -169,8 +171,9 @@ const dict: Record<Lang, Dict> = {
 		subtitle: '本科生研究者 · 量子计算 · 弗吉尼亚大学计算机系',
 		about1:
 			'我是弗吉尼亚大学计算机科学专业的本科生，研究方向处于量子信息与计算成像的交汇处：用带锥约束的 ADMM 求解器从无透镜散斑图像中重建光谱偏振数据立方体——该问题通过庞加莱-布洛赫映射与量子态层析在数学上同构；此外还有 PRISM（C++17 投影梯度下降引擎）和 RareEarth DB（基于 MongoDB 的材料数据库，在 UVA HPC 上运行 Fireworks 驱动的 DFT 工作流）。我也为量子电路模拟器 stim 贡献代码。',
-		about2:
-			'离开键盘之后，我练泰拳，也喜欢和我的喜乐蒂犬待在一起。我预计于 2027 年 5 月在弗吉尼亚大学取得计算机科学学士学位。',
+		about2a: '离开键盘之后，我练泰拳，也喜欢和我的',
+		about2sheltie: '喜乐蒂犬',
+		about2b: '待在一起。我预计于 2027 年 5 月在弗吉尼亚大学取得计算机科学学士学位。',
 		sections: {
 			experience: '经历',
 			projects: '项目',

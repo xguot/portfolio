@@ -127,7 +127,18 @@
 >
 	<p class="text-cloud-dim mb-4 leading-relaxed">{$t('about1')}</p>
 
-	<p class="text-cloud-dim mb-4 leading-relaxed">{$t('about2')}</p>
+	<p class="text-cloud-dim mb-4 leading-relaxed">
+		{$t('about2a')}
+		<a
+			href="/winter.JPG"
+			target="_blank"
+			rel="noreferrer"
+			class="text-cloud font-medium hover:text-reze transition-colors"
+		>
+			{$t('about2sheltie')}
+		</a>
+		{$t('about2b')}
+	</p>
 </section>
 
 <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
