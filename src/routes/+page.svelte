@@ -19,7 +19,7 @@
 			company: $t('exp.yale.company'),
 			description: $t('exp.yale.description'),
 			skills: ['PyTorch', 'ADMM', 'Quantum State Tomography', 'Convex Optimization', 'HPC'],
-			link: 'https://liu.yale.edu/'
+			link: 'https://engineering.yale.edu/research-and-faculty/faculty-directory/mengxia-liu'
 		},
 		{
 			date: $t('exp.ke.date'),

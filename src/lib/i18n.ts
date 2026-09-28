@@ -75,28 +75,28 @@ const dict: Record<Lang, Dict> = {
 				title: 'Research Assistant',
 				company: 'UVA BAL Lab (Prof. Tong)',
 				description:
-					'Engineered PRISM, a constrained optimization framework for multivariate longitudinal missing data imputation: an initial imputation is projected onto the FIML model-implied mean and covariance structure under a regularized objective that counteracts the variance attenuation inherent in unconstrained imputation. Built the solver engine in C++17 (RcppArmadillo) as projected gradient descent with Armijo backtracking line search, exact mean-constraint enforcement via per-column zero-sum gradient projection, and KKT convergence certification.'
+					'PRISM: C++17 projected-gradient-descent engine for multivariate longitudinal missing data, with KKT convergence certification.'
 			},
 			yale: {
 				date: 'FEB 2026 — PRESENT',
 				title: 'Research Assistant',
-				company: "Yale (Liu's Group)",
+				company: "Yale (Prof. Liu's Group)",
 				description:
-					'Engineered a joint spectro-polarimetric forward model recovering a 324-channel scene datacube (spatial × 81 wavelengths × 4 Stokes channels) from a single multiplexed lensless speckle image. Formulated the reconstruction as a conic-constrained inverse problem mathematically isomorphic to quantum state tomography: the Poincaré-Bloch map S ↦ ρ = ½(I + S·σ) sends each Stokes vector to a single-qubit density matrix, and the enforced Lorentz cone constraint S₀ ≥ ‖S₁:₃‖ is precisely the density-matrix positivity condition ρ ⪰ 0. Architected a GPU-accelerated consensus ADMM solver in PyTorch with exact joint proximal operators and closed-form Sherman-Morrison inversions, scaling across SLURM HPC clusters.'
+					'GPU-accelerated conic-constrained ADMM for lensless spectro-polarimetric reconstruction — a problem formally isomorphic to quantum state tomography.'
 			},
 			ke: {
 				date: 'OCT 2025 — PRESENT',
 				title: 'Research Assistant',
-				company: "UVA (Ke's Group)",
+				company: "UVA (Prof. Ke's Group)",
 				description:
-					'Applied Density Functional Theory (DFT) to investigate transition-metal magnetic anisotropy and its relationship to structural motifs. Created immersive browser-based 3D atomic visualizations with Three.js and JSmol, and engineered a cloud-native machine learning pipeline in Go and Next.js for secure dataset sharing across collaborators. Designing RareEarth DB, a rare-earth-focused analogue of the Materials Project: a MongoDB document architecture linking 4,648 curated magnetic-anisotropy measurements to ICSD/Pearson crystal structures, with a schema designed for Fireworks-orchestrated DFT workflows on UVA HPC; DOE funding proposal in preparation.'
+					'DFT for rare-earth magnetic anisotropy; designing RareEarth DB, a MongoDB + Fireworks materials database on UVA HPC.'
 			},
 			biocomplexity: {
 				date: 'MAY 2026 — AUG 2026',
 				title: 'Research Intern',
 				company: 'UVA Biocomplexity Institute',
 				description:
-					'Formulated massive-scale network simulations modeling the stochastic spread of viral pathogens, implementing SEIR compartmental cascade models to capture heterogeneous transmission dynamics. Engineered Graph Neural Network (GNN) architectures utilizing spatiotemporal message-passing frameworks to extract predictive topological features from dynamic contact networks.'
+					'SEIR epidemic simulations and graph neural networks for viral spread prediction on large contact networks.'
 			}
 		},
 		proj: {
@@ -189,28 +189,28 @@ const dict: Record<Lang, Dict> = {
 				title: '研究助理',
 				company: 'UVA BAL Lab（童教授课题组）',
 				description:
-					'开发 PRISM，一个面向多元纵向缺失数据插补的约束优化框架：将初始插补投影到 FIML 模型蕴含的均值和协方差结构上，并通过正则化目标函数抑制无约束条件期望插补固有的方差衰减。用 C++17（RcppArmadillo）构建求解器核心：带 Armijo 回溯线搜索的投影梯度下降、通过逐列零和梯度投影精确施加均值约束，以及每一步迭代计算逐列拉格朗日乘子估计的 KKT 收敛判定。'
+					'PRISM：面向多元纵向缺失数据的 C++17 投影梯度下降引擎，带 KKT 收敛判定。'
 			},
 			yale: {
 				date: '2026 年 2 月 — 至今',
 				title: '研究助理',
-				company: '耶鲁大学（Liu 课题组）',
+				company: '耶鲁大学（Liu 教授课题组）',
 				description:
-					'构建联合光谱偏振前向模型，从单张复用无透镜散斑图像中恢复 324 通道场景数据立方体（空间 × 81 波长 × 4 斯托克斯通道）。将该重建问题形式化为与量子态层析数学同构的锥约束反问题：庞加莱-布洛赫映射 S ↦ ρ = ½(I + S·σ) 将每个斯托克斯向量映为单量子比特密度矩阵，重建中施加的洛伦兹锥约束 S₀ ≥ ‖S₁:₃‖ 恰为密度矩阵正定性条件 ρ ⪰ 0。在 PyTorch 中构建 GPU 加速的一致性 ADMM 求解器，使用精确联合近端算子与 Sherman-Morrison 闭式求逆，并在 SLURM HPC 集群上扩展大规模张量运算。'
+					'GPU 加速的锥约束 ADMM 无透镜光谱偏振重建——该问题与量子态层析在数学上同构。'
 			},
 			ke: {
 				date: '2025 年 10 月 — 至今',
 				title: '研究助理',
-				company: 'UVA（Ke 课题组）',
+				company: 'UVA（Ke 教授课题组）',
 				description:
-					'运用密度泛函理论（DFT）研究过渡金属磁各向异性及其与复杂晶格中结构基元的关系。用 Three.js 和 JSmol 制作沉浸式浏览器三维原子可视化，并用 Go 和 Next.js 搭建云原生机器学习流水线，供全球合作者安全共享数据集并运行量子材料性质预测模型。正在设计 RareEarth DB——一个以稀土为重点、对标 Materials Project 的数据库：MongoDB 文档架构将 4,648 条精选磁各向异性测量数据与 ICSD/Pearson 晶体结构关联，模式设计面向 UVA HPC 上由 Fireworks 编排的 DFT 工作流；DOE 基金申请正在准备中。'
+					'稀土磁各向异性的 DFT 计算；设计 RareEarth DB——基于 MongoDB 与 Fireworks 的 UVA HPC 材料数据库。'
 			},
 			biocomplexity: {
 				date: '2026 年 5 月 — 2026 年 8 月',
 				title: '研究实习生',
 				company: 'UVA 生物复杂性研究所',
 				description:
-					'构建大规模网络仿真，动态建模病毒病原体的随机传播，实现 SEIR 仓室级联模型以刻画异质传播动力学。设计图神经网络（GNN）架构，利用时空消息传递框架从动态接触网络中提取预测性拓扑特征。'
+					'在大规模接触网络上进行 SEIR 流行病仿真，并用图神经网络预测病毒传播。'
 			}
 		},
 		proj: {
