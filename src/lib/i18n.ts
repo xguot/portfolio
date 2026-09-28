@@ -55,7 +55,7 @@ const dict: Record<Lang, Dict> = {
 		tagline: 'A CS student who fancies quantum',
 		subtitle: 'Undergraduate Researcher · Quantum Computing · CS @ UVA',
 		about1:
-			"I'm a CS undergrad at UVA working at the intersection of quantum information and computational imaging: reconstructing spectro-polarimetric datacubes from lensless speckle images with a conic-constrained ADMM solver — a problem formally isomorphic to quantum state tomography via the Poincaré-Bloch map — plus PRISM, a C++17 projected gradient descent engine, and RareEarth DB, a MongoDB-backed materials database with Fireworks DFT workflows on UVA HPC. I also contribute to stim, the quantum circuit simulator.",
+			"I'm a CS undergrad at UVA working at the intersection of quantum information and computational imaging — reconstructing spectro-polarimetric datacubes from lensless speckle images with a conic-constrained ADMM solver, a problem formally isomorphic to quantum state tomography via the Poincaré-Bloch map.",
 		about2a: 'Away from the keyboard I do Muay Thai and hang out with my ',
 		about2sheltie: 'Sheltie',
 		about2b:
@@ -103,37 +103,37 @@ const dict: Record<Lang, Dict> = {
 			lensless: {
 				title: 'lensless-recon — Conic-Constrained QST Solver',
 				description:
-					'GPU-accelerated consensus ADMM solver in PyTorch recovering a 324-channel spectro-polarimetric datacube from a single lensless speckle image. The conic-constrained inverse problem is isomorphic to quantum state tomography via the Poincaré-Bloch map, with the Lorentz cone constraint enforcing density-matrix positivity. Exact joint proximal operators and Sherman-Morrison closed-form inversions scale across SLURM HPC clusters.'
+					'GPU-accelerated ADMM solver recovering a 324-channel spectro-polarimetric datacube from a single lensless speckle image — a problem isomorphic to quantum state tomography via the Poincaré-Bloch map.'
 			},
 			prism: {
 				title: 'prism — Projected Gradient Imputation Engine',
 				description:
-					'A C++17 (RcppArmadillo) solver for multivariate longitudinal missing data imputation. Projected gradient descent with Armijo backtracking projects the imputation onto the FIML model-implied mean and covariance structure, with per-column zero-sum gradient projection enforcing mean constraints and KKT certification at every iterate.'
+					'C++17 (RcppArmadillo) solver projecting longitudinal missing data onto the FIML mean and covariance structure, with KKT-certified projected gradient descent.'
 			},
 			difi: {
 				title: 'difi — Git Diff Review Tool',
 				description:
-					'A high-performance CLI tool built in Go for interactive Git diff reviews. Features a keyboard-centric Terminal User Interface (TUI) with a file tree and editor-aware navigation, allowing users to jump directly to specific lines in Neovim/Vim for rapid code refinement.'
+					'A keyboard-centric Go CLI for interactive Git diff reviews with editor-aware navigation.'
 			},
 			stim: {
 				title: 'stim — Quantum Circuit Simulator Contributor',
 				description:
-					'Authored a pull request to stim, the high-performance stabilizer circuit simulator used across the quantum error correction community, contributing to circuit rendering and execution frameworks.'
+					'Contributed to the high-performance stabilizer circuit simulator used across the quantum error correction community.'
 			},
 			sanjaya: {
 				title: 'sanjaya — Academic Graph Pipeline',
 				description:
-					'An automated academic literature extraction pipeline utilizing the OpenAlex Academic Graph API, Scrapy, and Playwright. Extracts bilingual data and exports structured CSV/JSON datasets for downstream interdisciplinary research applications.'
+					'Automated academic literature extraction via the OpenAlex Academic Graph API, Scrapy, and Playwright.'
 			},
 			zsweep: {
 				title: 'zsweep — Minesweeper with Vim Motions',
 				description:
-					'A terminal-based Minesweeper built around Vim-style keyboard motion — sweep the board with hjkl and marks, no mouse required.'
+					'A terminal-based Minesweeper played entirely with Vim-style keyboard motions.'
 			},
 			neovim: {
 				title: 'Neovim — Contributor',
 				description:
-					'Contributed multiple Pull Requests to the Neovim core (C/Lua). Focused on Lua state change and ENV variable config supporting Vim logic.'
+					'Multiple pull requests to the Neovim core, focused on Lua state and ENV variable configuration.'
 			}
 		},
 		cert: {
@@ -170,7 +170,7 @@ const dict: Record<Lang, Dict> = {
 		tagline: '一个痴迷量子的计算机系学生',
 		subtitle: '本科生研究者 · 量子计算 · 弗吉尼亚大学计算机系',
 		about1:
-			'我是弗吉尼亚大学计算机科学专业的本科生，研究方向处于量子信息与计算成像的交汇处：用带锥约束的 ADMM 求解器从无透镜散斑图像中重建光谱偏振数据立方体——该问题通过庞加莱-布洛赫映射与量子态层析在数学上同构；此外还有 PRISM（C++17 投影梯度下降引擎）和 RareEarth DB（基于 MongoDB 的材料数据库，在 UVA HPC 上运行 Fireworks 驱动的 DFT 工作流）。我也为量子电路模拟器 stim 贡献代码。',
+			'我是弗吉尼亚大学计算机科学专业的本科生，研究方向处于量子信息与计算成像的交汇处：用带锥约束的 ADMM 求解器从无透镜散斑图像中重建光谱偏振数据立方体，该问题通过庞加莱-布洛赫映射与量子态层析在数学上同构。',
 		about2a: '离开键盘之后，我练泰拳，也喜欢和我的',
 		about2sheltie: '喜乐蒂犬',
 		about2b: '待在一起。我预计于 2027 年 5 月在弗吉尼亚大学取得计算机科学学士学位。',
@@ -217,37 +217,37 @@ const dict: Record<Lang, Dict> = {
 			lensless: {
 				title: 'lensless-recon — 锥约束 QST 求解器',
 				description:
-					'PyTorch 中 GPU 加速的一致性 ADMM 求解器，从单张无透镜散斑图像恢复 324 通道光谱偏振数据立方体。该锥约束反问题通过庞加莱-布洛赫映射与量子态层析同构，洛伦兹锥约束保证密度矩阵正定性。精确联合近端算子与 Sherman-Morrison 闭式求逆在 SLURM HPC 集群上扩展。'
+					'GPU 加速的 ADMM 求解器，从单张无透镜散斑图像恢复 324 通道光谱偏振数据立方体，该问题通过庞加莱-布洛赫映射与量子态层析同构。'
 			},
 			prism: {
 				title: 'prism — 投影梯度插补引擎',
 				description:
-					'面向多元纵向缺失数据插补的 C++17（RcppArmadillo）求解器。带 Armijo 回溯的投影梯度下降将插补结果投影到 FIML 模型蕴含的均值与协方差结构上，逐列零和梯度投影施加均值约束，每次迭代进行 KKT 收敛判定。'
+					'C++17（RcppArmadillo）求解器，将纵向缺失数据投影到 FIML 均值与协方差结构上，采用带 KKT 收敛判定的投影梯度下降。'
 			},
 			difi: {
 				title: 'difi — Git Diff 审查工具',
 				description:
-					'用 Go 编写的高性能命令行工具，用于交互式 Git diff 审查。提供以键盘为中心的终端界面（TUI），带文件树和编辑器感知导航，可一键跳转到 Neovim/Vim 中的具体行。'
+					'以键盘为中心的 Go 命令行工具，用于交互式 Git diff 审查，支持编辑器感知导航。'
 			},
 			stim: {
 				title: 'stim — 量子电路模拟器贡献者',
 				description:
-					'向 stim 提交了拉取请求。stim 是量子纠错社区广泛使用的高性能稳定子电路模拟器，我贡献了电路渲染与执行框架相关代码。'
+					'为量子纠错社区广泛使用的高性能稳定子电路模拟器贡献代码。'
 			},
 			sanjaya: {
 				title: 'sanjaya — 学术图谱流水线',
 				description:
-					'基于 OpenAlex Academic Graph API、Scrapy 和 Playwright 的学术文献自动提取流水线。提取双语数据并导出结构化 CSV/JSON 数据集，用于跨学科下游研究。'
+					'基于 OpenAlex Academic Graph API、Scrapy 和 Playwright 的学术文献自动提取流水线。'
 			},
 			zsweep: {
 				title: 'zsweep — 带 Vim 键位的扫雷',
 				description:
-					'围绕 Vim 风格键盘操作构建的终端扫雷游戏——用 hjkl 和标记扫雷，无需鼠标。'
+					'完全用 Vim 风格键盘操作游玩的终端扫雷游戏。'
 			},
 			neovim: {
 				title: 'Neovim — 贡献者',
 				description:
-					'向 Neovim 核心（C/Lua）提交了多个拉取请求。专注于 Lua 状态变更和 ENV 变量配置对 Vim 逻辑的支持。'
+					'向 Neovim 核心提交多个拉取请求，专注于 Lua 状态与 ENV 变量配置。'
 			}
 		},
 		cert: {

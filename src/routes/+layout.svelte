@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Socials from '$lib/components/Socials.svelte';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+	import LanguageToggle from '$lib/components/LanguageToggle.svelte';
 	import { t, isZh, lang } from '$lib/i18n';
 	import { onMount } from 'svelte';
 
@@ -97,3 +98,4 @@
 </div>
 
 <ThemeSwitch />
+<LanguageToggle />

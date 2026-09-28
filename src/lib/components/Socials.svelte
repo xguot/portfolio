@@ -1,15 +1,11 @@
 <script lang="ts">
-	import { t, toggleLang, isZh } from '$lib/i18n';
+	import { t } from '$lib/i18n';
 
 	const links = [
 		{ name: 'GitHub', url: 'https://github.com/xguot', icon: 'github' },
 		{ name: 'LinkedIn', url: 'https://linkedin.com/in/xiyuan-tommy-guo', icon: 'linkedin' },
 		{ name: 'Email', url: 'mailto:mhn4xq@virginia.edu', icon: 'mail' }
 	];
-
-	function handleLangToggle() {
-		toggleLang();
-	}
 </script>
 
 <ul class="mt-8 flex items-center gap-6 lg:mt-0" aria-label={$t('socials')}>
@@ -57,16 +53,4 @@
 			</a>
 		</li>
 	{/each}
-	<li>
-		<button
-			type="button"
-			onclick={handleLangToggle}
-			aria-label={$t('langLabel')}
-			class="text-cloud-dim hover:text-reze focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-reze block cursor-pointer transition-colors duration-300"
-		>
-			<span class="flex h-6 w-6 items-center justify-center font-mono text-sm font-medium">
-				{$isZh ? 'EN' : '中'}
-			</span>
-		</button>
-	</li>
 </ul>
