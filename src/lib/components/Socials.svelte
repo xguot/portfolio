@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+	import { t } from '$lib/i18n';
+
 	const links = [
 		{ name: 'GitHub', url: 'https://github.com/xguot', icon: 'github' },
 		{ name: 'LinkedIn', url: 'https://linkedin.com/in/xiyuan-tommy-guo', icon: 'linkedin' },
@@ -6,7 +8,7 @@
 	];
 </script>
 
-<ul class="mt-8 flex items-center gap-6 lg:mt-0" aria-label="Social media links">
+<ul class="mt-8 flex items-center gap-6 lg:mt-0" aria-label={$t('socials')}>
 	{#each links as link}
 		<li>
 			<a

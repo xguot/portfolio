@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { t } from '$lib/i18n';
 
 	let theme = $state('light');
 	let pulled = $state(false);
@@ -41,7 +42,7 @@
 			type="button"
 			onclick={toggle}
 			aria-pressed={theme === 'dark'}
-			aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+			aria-label={theme === 'dark' ? $t('switchToLight') : $t('switchToDark')}
 			class="group relative flex size-10 cursor-pointer items-center justify-center rounded-full border border-cloud/15 bg-bg-card shadow-md transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-reze motion-safe:group-hover:animate-sway motion-reduce:transition-none sm:size-11"
 		>
 			<span

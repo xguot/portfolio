@@ -2,6 +2,9 @@
 	import '../app.css';
 	import Socials from '$lib/components/Socials.svelte';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+	import LanguageToggle from '$lib/components/LanguageToggle.svelte';
+	import { t, isZh, lang } from '$lib/i18n';
+	import { onMount } from 'svelte';
 
 	let mouseX = 0;
 	let mouseY = 0;
@@ -10,7 +13,19 @@
 		mouseX = event.clientX;
 		mouseY = event.clientY;
 	}
+
+	onMount(() => {
+		document.documentElement.lang = $lang === 'zh' ? 'zh-CN' : 'en';
+	});
 </script>
+
+<svelte:head>
+	<title>
+		{$isZh
+			? '郭希元 (Tommy) | 本科量子计算研究者'
+			: 'Xiyuan (Tommy) Guo | Undergraduate Quantum Researcher'}
+	</title>
+</svelte:head>
 
 <svelte:window on:mousemove={handleMouseMove} />
 
@@ -47,10 +62,10 @@
 					<a href="/">Xiyuan (Tommy) Guo</a>
 				</h1>
 				<h2 class="text-cloud-dim mt-3 text-lg font-medium tracking-tight sm:text-xl">
-					Undergraduate Researcher · Quantum Computing · CS @ UVA
+					{$t('subtitle')}
 				</h2>
 				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
-					A CS student who fancies quantum
+					{$t('tagline')}
 					<span class="text-reze ml-1 font-mono italic">ψ</span>
 				</p>
 
@@ -65,7 +80,7 @@
 									<span
 										class="bg-cloud-dim group-hover:bg-reze mr-4 h-px w-8 transition-all duration-300 group-hover:w-16"
 									></span>
-									{item}
+									{$t('nav.' + item)}
 								</a>
 							</li>
 						{/each}
@@ -82,4 +97,5 @@
 	</div>
 </div>
 
+<LanguageToggle />
 <ThemeSwitch />
