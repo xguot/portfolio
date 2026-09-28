@@ -187,7 +187,7 @@ const dict: Record<Lang, Dict> = {
 			prism: {
 				date: '2026 年 4 月 — 至今',
 				title: '研究助理',
-				company: 'UVA BAL Lab（童教授课题组）',
+				company: 'UVA BAL Lab（Tong 教授课题组）',
 				description:
 					'PRISM：面向多元纵向缺失数据的 C++17 投影梯度下降引擎，带 KKT 收敛判定。'
 			},
