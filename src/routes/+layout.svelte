@@ -6,12 +6,22 @@
 	import { t, isZh, lang } from '$lib/i18n';
 	import { onMount } from 'svelte';
 
-	let mouseX = 0;
-	let mouseY = 0;
+	let mouseX = $state(0);
+	let mouseY = $state(0);
+	let measured = $state(false);
+	let measureTimer: ReturnType<typeof setTimeout> | undefined;
+
+	let { children } = $props();
 
 	function handleMouseMove(event: MouseEvent) {
 		mouseX = event.clientX;
 		mouseY = event.clientY;
+	}
+
+	function measure() {
+		measured = true;
+		clearTimeout(measureTimer);
+		measureTimer = setTimeout(() => (measured = false), 1200);
 	}
 
 	onMount(() => {
@@ -51,13 +61,27 @@
 			class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-4/12 lg:flex-col lg:justify-between lg:py-24"
 		>
 			<div>
-				<a href="/uncles.JPG" target="_blank" rel="noreferrer">
-					<img
-						src="/profile.jpg"
-						alt="Xiyuan (Tommy) Guo"
-						class="mb-6 size-24 rounded-full border-2 border-reze/40 object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:size-28"
-					/>
-				</a>
+				<div class="flex items-start gap-3">
+					<button
+						type="button"
+						onclick={measure}
+						aria-label="Profile picture"
+						class="group relative shrink-0"
+					>
+						<img
+							src="/profile.jpg"
+							alt="Xiyuan (Tommy) Guo"
+							class="mb-6 size-24 rounded-full border-2 border-reze/40 object-cover shadow-lg transition-all duration-500 hover:scale-105 sm:size-28 {measured
+								? 'scale-105 blur-[2px]'
+								: ''}"
+						/>
+					</button>
+					{#if measured}
+						<span class="text-reze animate-pulse mt-3 font-mono text-lg italic" aria-hidden="true">
+							ψ
+						</span>
+					{/if}
+				</div>
 				<h1 class="text-cloud text-4xl font-bold tracking-tight sm:text-5xl">
 					<a href="/">Xiyuan (Tommy) Guo</a>
 				</h1>
@@ -92,7 +116,7 @@
 		</header>
 
 		<main class="pt-24 lg:w-7/12 lg:py-24">
-			<slot />
+			{@render children()}
 		</main>
 	</div>
 </div>
