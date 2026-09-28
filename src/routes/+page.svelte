@@ -153,16 +153,16 @@
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
 		Away from the keyboard I do
+		<span class="text-cloud font-medium">Muay Thai</span> and hang out with my
 		<a
-			href="/kicking.MOV"
+			href="/winter.JPG"
 			target="_blank"
 			rel="noreferrer"
 			class="text-cloud font-medium hover:text-reze transition-colors"
 		>
-			Muay Thai
+			Sheltie
 		</a>
-		and hang out with my
-		<span class="text-cloud font-medium">Sheltie</span>. I’m completing my B.A. in Computer
+		. I’m completing my B.A. in Computer
 		Science (Expected May 2027) at the
 		<span class="text-cloud font-medium">University of Virginia</span>.
 	</p>
