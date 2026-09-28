@@ -24,7 +24,7 @@
 <svelte:head>
 	<title>
 		{$isZh
-			? '郭希元 (Tommy) | 本科量子计算研究者'
+			? '郭希源 (Tommy) | 本科量子计算研究者'
 			: 'Xiyuan (Tommy) Guo | Undergraduate Quantum Researcher'}
 	</title>
 </svelte:head>
