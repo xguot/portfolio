@@ -2,114 +2,122 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
 	import CertificationCard from '$lib/components/CertificationCard.svelte';
+	import { t } from '$lib/i18n';
 
-	const experience = [
+	const experience = $derived([
 		{
-			date: 'APR 2026 — PRESENT',
-			title: 'Research Assistant',
-			company: 'UVA (BAL Lab)',
-			description:
-				'Formulating a quantum-inspired psychometric framework utilizing Hilbert-space probability models to map how individuals transition from cognitive uncertainty to commitment across repeated longitudinal measurements. Engineering a multivariate longitudinal missing data imputation framework that enforces the Law of Total Variation, with a custom Lagrange-constrained C++17 gradient descent solver implemented via RcppArmadillo.',
-			skills: ['C++', 'RcppArmadillo', 'Psychometrics', 'Optimization', 'Mathematical Statistics'],
-			link: 'https://xtong.org/'
+			date: $t('exp.prism.date'),
+			title: $t('exp.prism.title'),
+			company: $t('exp.prism.company'),
+			description: $t('exp.prism.description'),
+			skills: ['C++17', 'RcppArmadillo', 'Convex Optimization', 'KKT', 'Longitudinal Statistics'],
+			link: 'https://github.com/xguot/prism'
 		},
 		{
-			date: 'FEB 2026 — PRESENT',
-			title: 'Research Assistant',
-			company: 'Yale (Liu\'s Group)',
-			description:
-				'Developing a deep unrolled ADMM framework for blind computational polarimetry, reconstructing the full Stokes polarization cube from single diffuser speckle measurements. Engineering a custom PyTorch U-Net pipeline with rigorous physics-informed constraints using vectorial Stokes parameter representations and Lorentz cone orthogonal projections, yielding 4.5 dB PSNR improvement over baseline methods.',
-			skills: ['PyTorch', 'ADMM', 'Computational Imaging', 'Physics-Informed Neural Networks', 'Polarimetry'],
-			link: 'https://liu.yale.edu/'
+			date: $t('exp.yale.date'),
+			title: $t('exp.yale.title'),
+			company: $t('exp.yale.company'),
+			description: $t('exp.yale.description'),
+			skills: ['PyTorch', 'ADMM', 'Quantum State Tomography', 'Convex Optimization', 'HPC'],
+			link: 'https://engineering.yale.edu/research-and-faculty/faculty-directory/mengxia-liu'
 		},
 		{
-			date: 'OCT 2025 — PRESENT',
-			title: 'Research Assistant',
-			company: 'UVA (Ke\'s Group)',
-			description:
-				'Applying quantum mechanics principles to engineer Density Functional Theory (DFT) and Dynamical Mean-Field Theory (DMFT) reconstruction algorithms for frontier rare-earth materials research. Architecting a cloud-native ML pipeline using Go and Next.js backed by DOE-BES and DOE-ARPA-E funding, and creating immersive browser-based 3D atomic visualizations with Three.js and JSmol.',
-			skills: ['Go', 'Next.js', 'DFT', 'Three.js', 'Quantum Mechanics', 'Machine Learning'],
+			date: $t('exp.ke.date'),
+			title: $t('exp.ke.title'),
+			company: $t('exp.ke.company'),
+			description: $t('exp.ke.description'),
+			skills: ['DFT', 'MongoDB', 'Fireworks', 'Go', 'Three.js', 'Quantum Materials'],
 			link: 'https://www.virginia.edu/'
 		},
 		{
-			date: 'MAY 2026 — PRESENT',
-			title: 'Research Intern',
-			company: 'UVA Biocomplexity Institute',
-			description:
-				'Formulating massive-scale network simulations modeling stochastic viral pathogen spread via SEIR compartmental cascade models. Engineering attention-based Graph Neural Network (GNN) architectures to predict multi-hop epidemic propagation using spatiotemporal message-passing frameworks on HPC infrastructure.',
-			skills: ['GNN', 'Network Science', 'Simulation', 'Bayesian Data Science', 'HPC'],
+			date: $t('exp.biocomplexity.date'),
+			title: $t('exp.biocomplexity.title'),
+			company: $t('exp.biocomplexity.company'),
+			description: $t('exp.biocomplexity.description'),
+			skills: ['GNN', 'Network Science', 'Simulation', 'SEIR', 'Python'],
 			link: 'https://biocomplexity.virginia.edu/'
 		}
-	];
+	]);
 
-	const projects = [
+	const projects = $derived([
 		{
-			title: 'smriti — Longitudinal Imputation Engine',
-			description:
-				'An R package for automated longitudinal missing data imputation. Executes a three-phase architecture combining missForest initialization with a custom C++ Lagrangian projection engine to strictly preserve the structural variance of the target covariance manifold.',
-			tags: ['R', 'C++', 'RcppArmadillo', 'Statistics', 'CRAN'],
-			link: 'https://github.com/xguot/smriti',
-			thumbnail: '/statue-demo.gif'
+			title: $t('proj.lensless.title'),
+			description: $t('proj.lensless.description'),
+			tags: ['PyTorch', 'ADMM', 'QST', 'Lorentz Cone', 'HPC'],
+			link: 'https://github.com/xguot/lensless-recon'
 		},
 		{
-			title: 'difi — Git Diff Review Tool',
-			description:
-				'A high-performance CLI tool built in Go for interactive Git diff reviews. Features a keyboard-centric Terminal User Interface (TUI) with a file tree and editor-aware navigation, allowing users to jump directly to specific lines in Neovim/Vim for rapid code refinement.',
+			title: $t('proj.prism.title'),
+			description: $t('proj.prism.description'),
+			tags: ['C++17', 'RcppArmadillo', 'Convex Optimization', 'KKT', 'Statistics'],
+			link: 'https://github.com/xguot/prism'
+		},
+		{
+			title: $t('proj.difi.title'),
+			description: $t('proj.difi.description'),
 			tags: ['Go', 'Bubble Tea', 'Git API', 'CLI', 'Nvim Plugin'],
 			link: 'https://github.com/xguot/difi',
 			stars: 342,
 			thumbnail: '/difi-demo.gif',
-			hnRanking: 6,
+			hnRanking: 5,
 			hnLink: 'https://news.ycombinator.com/item?id=46870917'
 		},
 		{
-			title: 'sanjaya — Academic Graph Pipeline',
-			description:
-				'An automated academic literature extraction pipeline utilizing the OpenAlex Academic Graph API, Scrapy, and Playwright. Extracts bilingual data and exports structured CSV/JSON datasets for downstream interdisciplinary research applications.',
+			title: $t('proj.stim.title'),
+			description: $t('proj.stim.description'),
+			tags: ['Quantum Computing', 'Stabilizer Circuits', 'C++', 'Open Source'],
+			link: 'https://github.com/quantumlib/stim'
+		},
+		{
+			title: $t('proj.sanjaya.title'),
+			description: $t('proj.sanjaya.description'),
 			tags: ['Python', 'Scrapy', 'Playwright', 'Data Engineering', 'Academic Graph'],
-			link: 'https://github.com/xguot/sanjaya',
+			link: 'https://sanjaya-six.vercel.app/',
+			thumbnail: '/sanjaya.png'
+		},
+		{
+			title: $t('proj.zsweep.title'),
+			description: $t('proj.zsweep.description'),
+			tags: ['Go', 'TUI', 'Vim Motions', 'CLI'],
+			link: 'https://zsweep.com',
 			thumbnail: '/zsweep-demo.gif'
 		},
 		{
-			title: 'Neovim — Contributor',
-			description:
-				'Contributed multiple Pull Requests to the Neovim core (C/Lua). Focused on Lua state change and ENV variable config supporting Vim logic.',
+			title: $t('proj.neovim.title'),
+			description: $t('proj.neovim.description'),
 			tags: ['C', 'Lua', 'Open Source', 'Systems'],
 			link: 'https://github.com/neovim/neovim/pulls?q=is%3Apr+author%3Axguot+',
 			stars: '90k+',
 			thumbnail: '/nvim-demo.png'
 		}
-	];
+	]);
 
-	const certifications = [
+	const certifications = $derived([
 		{
-			title: 'AWS Certified AI Practitioner',
-			issuer: 'Amazon Web Services',
+			title: $t('cert.ai.title'),
+			issuer: $t('cert.ai.issuer'),
 			date: '2025',
 			link: 'https://www.credly.com/badges/639eb293-6ca7-4412-b909-01608c57cc89/linked_in_profile',
 			badge: 'aws-ai-practitioner.png',
-			description:
-				'Validated expertise in deploying production-grade AI solutions on AWS. Focused on prompt engineering, fine-tuning Foundation Models via Amazon Bedrock, and implementing low-latency inference pipelines for real-time financial data processing.'
+			description: $t('cert.ai.description')
 		},
 		{
-			title: 'AWS Certified Cloud Practitioner',
-			issuer: 'Amazon Web Services',
+			title: $t('cert.cloud.title'),
+			issuer: $t('cert.cloud.issuer'),
 			date: '2025',
 			link: 'https://www.credly.com/badges/896f99ca-564e-49b9-978a-177e5f111ca3/linked_in_profile',
 			badge: '/aws-cloud-practitioner.png',
-			description:
-				'Mastery of the AWS Well-Architected Framework, emphasizing security, high availability, and performance efficiency. Architected cloud-native environments leveraging Amazon Aurora for relational data and EC2/Lambda for scalable compute logic.'
+			description: $t('cert.cloud.description')
 		},
 		{
-			title: 'USACO Silver Division',
-			issuer: 'USA Computing Olympiad',
+			title: $t('cert.usaco.title'),
+			issuer: $t('cert.usaco.issuer'),
 			date: '2023',
 			link: 'https://usaco.org/',
 			badge: '/usaco-logo.png',
-			description:
-				'Competed in high-stakes algorithmic challenges focusing on computational efficiency and data structure optimization. Solved complex problems requiring $O(n \log n)$ performance using greedy algorithms, dynamic programming, and graph theory.'
+			description: $t('cert.usaco.description')
 		}
-	];
+	]);
 </script>
 
 <section
@@ -117,32 +125,19 @@
 	class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
 	aria-label="About me"
 >
-	<p class="text-cloud-dim mb-4 leading-relaxed">
-		I’m a software engineer focused on the intersection of
-		<span class="text-cloud font-medium">quantitative finance</span> and
-		<span class="text-cloud font-medium">distributed systems</span>. I specialize in building
-		high-performance <span class="text-cloud font-medium">Svelte</span> applications that bridge the gap
-		between complex backend logic and intuitive, low-latency user interfaces.
-	</p>
+	<p class="text-cloud-dim mb-4 leading-relaxed">{$t('about1')}</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		Currently, I am focused on architecting terminal-centric tooling and reactive web systems,
-		notably as the creator of <span class="text-cloud font-medium">difi</span> and
-		<span class="text-cloud font-medium">zsweep</span> (HN #5 & #6). Beyond my own projects, I am an
-		<span class="text-cloud font-medium">Open Source Contributor</span>
-		to Neovim and Statue. I’m also deep-diving into market microstructure—working through
-		<span class="text-cloud font-medium">The Green Book</span> to apply systems engineering rigor to quantitative
-		finance.
-	</p>
-
-	<p class="text-cloud-dim mb-4 leading-relaxed">
-		When I’m not at the terminal, you can usually find me at the
-		<span class="text-cloud font-medium">Muay Thai</span> gym, training calisthenics, or behind a
-		drum kit. I’m an avid off-roader in my
-		<span class="text-cloud font-medium">Tacoma TRD Pro</span>
-		and a heavy consumer of specialty coffee. I am currently completing my double major in Physics
-		and Computer Science (Expected May 2028) at the
-		<span class="text-cloud font-medium">University of Virginia</span>.
+		{$t('about2a')}
+		<a
+			href="/winter.JPG"
+			target="_blank"
+			rel="noreferrer"
+			class="text-cloud font-medium hover:text-reze transition-colors"
+		>
+			{$t('about2sheltie')}
+		</a>
+		{$t('about2b')}
 	</p>
 </section>
 
@@ -150,7 +145,9 @@
 	<div
 		class="bg-bg-main/75 sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
 	>
-		<h2 class="text-cloud text-sm font-bold tracking-widest uppercase lg:sr-only">Experience</h2>
+		<h2 class="text-cloud text-sm font-bold tracking-widest uppercase lg:sr-only">
+			{$t('sections.experience')}
+		</h2>
 	</div>
 	<div class="flex flex-col gap-12">
 		{#each experience as job}
@@ -159,13 +156,13 @@
 	</div>
 	<div class="mt-12">
 		<a
-			href="/resume.pdf"
+			href="/cv.pdf"
 			target="_blank"
 			rel="noreferrer"
 			class="group text-cloud hover:text-reze inline-flex items-center leading-tight font-semibold transition-colors"
 		>
 			<span class="group-hover:border-reze border-b border-transparent pb-px transition"
-				>View Full Résumé</span
+				>{$t('viewCV')}</span
 			>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +183,9 @@
 	<div
 		class="bg-bg-main/75 sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
 	>
-		<h2 class="text-cloud text-sm font-bold tracking-widest uppercase lg:sr-only">Projects</h2>
+		<h2 class="text-cloud text-sm font-bold tracking-widest uppercase lg:sr-only">
+			{$t('sections.projects')}
+		</h2>
 	</div>
 	<div class="flex flex-col gap-12">
 		{#each projects as project}
@@ -201,7 +200,7 @@
 			class="group text-cloud hover:text-reze inline-flex items-center leading-tight font-semibold transition-colors"
 		>
 			<span class="group-hover:border-reze border-b border-transparent pb-px transition"
-				>View All Projects</span
+				>{$t('viewAll')}</span
 			>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +225,7 @@
 		class="bg-bg-main/75 sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
 	>
 		<h2 class="text-cloud text-sm font-bold tracking-widest uppercase lg:sr-only">
-			Certifications
+			{$t('sections.certifications')}
 		</h2>
 	</div>
 	<div class="flex flex-col gap-8">
@@ -236,11 +235,11 @@
 	</div>
 	<div class="mt-12 flex flex-col items-start gap-4">
 		<button
-			on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+			onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 			class="group text-cloud hover:text-reze inline-flex items-center leading-tight font-semibold transition-colors"
 		>
 			<span class="group-hover:border-reze border-b border-transparent pb-px transition">
-				Back to Top
+				{$t('backToTop')}
 			</span>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -258,14 +257,21 @@
 		</button>
 
 		<p class="text-cloud-dim/60 max-w-md text-sm leading-normal">
-			Loosely designed in <span class="text-cloud-dim">Figma</span> and engineered in
-			<span class="text-cloud-dim">Neovim</span> on an
-			<span class="text-cloud-dim">HHKB</span>. Built with
-			<span class="text-cloud-dim">SvelteKit</span>
-			and
-			<span class="text-cloud-dim">Tailwind CSS</span>, reviewed with
-			<span class="text-cloud-dim">difi</span>, and deployed with
-			<span class="text-cloud-dim">Vercel</span>.
+			{$t('footer')}&nbsp;
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.6"
+				class="text-reze inline-block h-3.5 w-3.5"
+				aria-hidden="true"
+				role="img"
+			>
+				<title>Keyboard</title>
+				<rect x="2" y="5" width="20" height="14" rx="2"></rect>
+				<path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 13h.01M18 13h.01M9 13h6"></path>
+			</svg>
 		</p>
 	</div>
 </section>

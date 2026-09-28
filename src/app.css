@@ -1,38 +1,86 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes sway {
+	0%,
+	100% {
+		transform: translateX(0) rotate(0deg);
+	}
+	30% {
+		transform: translateX(1.5px) rotate(5deg);
+	}
+	60% {
+		transform: translateX(-1.5px) rotate(-5deg);
+	}
+	80% {
+		transform: translateX(0.75px) rotate(2deg);
+	}
+}
+
 @theme {
+	/* Day theme: white with teal/mint accents */
+	--color-bg-main: #fdfefd;
+	--color-bg-card: #ffffff;
 
-	--color-bg-main: #0f0f16;
-	--color-bg-card: #1a1a23; /* Slightly lighter for cards */
+	--color-cloud: #12322e;
+	--color-cloud-dim: #4e6b66;
 
-	--color-cloud: #f0eee9;
-	--color-cloud-dim: #94949e; /* Muted version for secondary text */
-
-	--color-reze: #b392f0;
-	--color-reze-dim: rgba(179, 146, 240, 0.1); /* Low opacity for backgrounds */
+	--color-reze: #0d9488;
+	--color-reze-dim: rgba(13, 148, 136, 0.1);
 
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, sans-serif;
 	--font-mono: 'Fira Code', monospace;
+
+	--animate-sway: sway 0.9s ease-in-out infinite;
+}
+
+/* Night theme: total black, brighter text, mint green glow */
+.dark {
+	--color-bg-main: #000000;
+	--color-bg-card: #0b110d;
+
+	--color-cloud: #ecfaf4;
+	--color-cloud-dim: #93aca1;
+
+	--color-reze: #4ade9b;
+	--color-reze-dim: rgba(74, 222, 155, 0.1);
+
+	--glow: rgba(134, 239, 172, 0.12);
+	--scrollbar-thumb: #1d2a22;
+
+	color-scheme: dark;
+}
+
+:root {
+	--glow: rgba(45, 212, 191, 0.16);
+	--scrollbar-bg: var(--color-bg-main);
+	--scrollbar-thumb: #cbd9d5;
 }
 
 /* Global Styles */
-:root {
-	--scrollbar-bg: var(--color-bg-main);
-	--scrollbar-thumb: #2d2d3a;
-}
-
 body {
+	color-scheme: light;
 	background-color: var(--color-bg-main);
 	color: var(--color-cloud);
 	font-family: var(--font-sans);
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	transition:
+		background-color 0.35s ease,
+		color 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+		transition: none;
+	}
 }
 
 ::selection {
 	background-color: var(--color-reze);
-	color: var(--color-bg-main); /* Black text on purple highlight */
+	color: var(--color-bg-main);
 }
 
 /* Scrollbar Customization */

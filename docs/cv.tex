@@ -1,7 +1,7 @@
 \documentclass[11pt, letterpaper]{article}
 
 % --- Packages ---
-\usepackage[margin=0.85in]{geometry} 
+\usepackage[margin=0.85in]{geometry}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -11,14 +11,14 @@
 \usepackage{enumitem} % Advanced list control
 
 % --- Colors ---
-\definecolor{primary}{RGB}{0, 0, 0} 
-\definecolor{linkcolor}{RGB}{25, 84, 166} 
+\definecolor{primary}{RGB}{0, 0, 0}
+\definecolor{linkcolor}{RGB}{25, 84, 166}
 
 % --- Hyperlinks ---
 \hypersetup{
     colorlinks=true,
     linkcolor=linkcolor,
-    filecolor=linkcolor,      
+    filecolor=linkcolor,
     urlcolor=linkcolor,
     pdftitle={Academic CV - Xiyuan GUO},
 }
@@ -45,22 +45,25 @@
 
 % --- Heading ---
 \begin{center}
-    {\Huge \scshape \textbf{Xiyuan GUO}} \\ \vspace{8pt}
-    Physics and Computer Science Double Major, University of Virginia \\ \vspace{4pt}
-    \href{mailto:tommyguo024@outlook.com}{tommyguo024@outlook.com} $\vert$ (516) 474-3279 $\vert$ \href{https://xguo.info}{xguo.info} $\vert$ \href{https://github.com/xguot}{github.com/xguot}
+    {\Huge \scshape \textbf{Xiyuan (Tommy) GUO}} \\ \vspace{8pt}
+    B.A. Candidate in Computer Science, University of Virginia \\ \vspace{4pt}
+    \href{mailto:mhn4xq@virginia.edu}{mhn4xq@virginia.edu} $\vert$ (516) 474-3279 $\vert$ \href{https://xguo.info}{xguo.info} $\vert$ \href{https://github.com/xguot}{github.com/xguot}
 \end{center}
 \vspace{8pt}
 
 % --- Scientific Focus ---
 \section{RESEARCH FOCUS}
-\noindent Computational imaging; density functional theory (DFT); longitudinal measurement and missing data; Bayesian statistics; mathematical matrix calculus; physics-informed neural networks (PINN); reproducible statistical software; interdisciplinary computational science.
+\noindent Quantum state tomography (QST); open quantum systems; quantum circuit simulation; computational imaging \& convex optimization; density functional theory (DFT); physics-informed machine learning; GPU-accelerated numerical linear algebra.
 
 % --- Education ---
 \section{EDUCATION}
-\cvheading{University of Virginia}{Expected May 2028}{B.S., Physics and Computer Science}{Charlottesville, VA}
+\cvheading{University of Virginia}{Expected May 2027}{B.A. in Computer Science}{Charlottesville, VA}
 \begin{cvitemize}
     \item \textbf{GPA:} 3.89/4.00
+    \item \textbf{Relevant Coursework:} PHYS 5880 (Introduction to Quantum Computing, Graduate Level), Data Structures and Algorithms 2 (CS 3100), Database (CS 4750).
+    \item \textbf{Independent Study:} Quantum Information Theory (Caltech PH219A Curriculum completed), Advanced Quantum Mechanics (Sakurai).
 \end{cvitemize}
+\cvheading{Kimball Union Academy}{2024}{High School Diploma}{Meriden, NH}
 
 % --- Grants & Fellowships ---
 \section{GRANTS AND FELLOWSHIPS}
@@ -69,48 +72,58 @@
     \small{Secured competitive grant funding to drive independent, interdisciplinary computational research alongside graduate mentorship.}
 \end{cvitemize}
 
+% --- Publications & Manuscripts ---
+\section{PUBLICATIONS \& MANUSCRIPTS IN PREPARATION}
+\begin{cvitemize}
+    \item Guo, X., [Co-authors], Ke, L. "Transition-metal magnetic anisotropy and its relationship to structural motifs." \textit{[Manuscript in preparation]}.
+    \item Guo, X., [Co-authors], Liu, M. "Joint Spectro-Polarimetric Lensless Reconstruction via Conic-Constrained ADMM." \textit{[Manuscript in preparation]}. Code available on request.
+    \item Guo, X., [Co-authors], Tong, X.C. "PRISM: Lagrangian Projection Engines for Multivariate Longitudinal Missing Data Imputation." \textit{[Manuscript in preparation]}. Code: \href{https://github.com/xguot/prism}{github.com/xguot/prism}.
+\end{cvitemize}
+
 % --- Research Experience ---
 \section{PROFESSIONAL RESEARCH EXPERIENCE}
 
-\cvheading{Research Assistant}{Apr 2026 -- Present}{UVA BAL Lab (Prof. Xin Cynthia Tong's Group)}{Charlottesville, VA}
-\begin{cvitemize}
-    \item Formulating a quantum-inspired psychometric framework utilizing Hilbert-space probability models to map how individuals transition from cognitive uncertainty to commitment across repeated longitudinal measurements.
-    \item Integrating construct validity and experience-sampling data with simulation-based validation to computationally formalize psychological constructs, including cognitive fluidity, ambivalence, crystallization, and re-fluidization.
-    \item Engineered a mathematical framework for multivariate longitudinal missing data imputation that enforces the Law of Total Variation, mitigating structural covariance bias inherent in unconstrained predictive machine learning models.
-    \item Developed a custom gradient descent solver to iteratively evaluate dual Lagrangian multipliers, ensuring the final global variance of imputed datasets converges to strict theoretical asymptotic expectations; implemented in C++17 via RcppArmadillo.
-\end{cvitemize}
-
 \cvheading{Research Assistant}{Feb 2026 -- Present}{Yale University (Prof. Mengxia Liu's Group)}{New Haven, CT}
 \begin{cvitemize}
-    \item Formulated a deep unrolled ADMM framework to solve ill-posed inverse problems in computational imaging, reconstructing multi-dimensional data encompassing spatial, spectral, and full-Stokes polarization domains.
-    \item Implemented rigorous physics-informed constraints within deep learning optimization loops, mathematically grounding vectorial Stokes parameter representations utilizing complex numbers, trigonometric formulations, and 3D Poincaré sphere mappings.
-    \item Engineered a specialized PyTorch pipeline utilizing a custom convolutional U-Net architecture as a learned proximal operator, specifically designed to mitigate non-Gaussian hardware sensor noise and yielding a 4.5 dB increase in PSNR.
+    \item Engineered a joint spectro-polarimetric forward model to recover a 324-channel scene datacube (spatial $\times$ 81 wavelengths $\times$ 4 Stokes channels) from a single multiplexed lensless speckle image.
+    \item Formulated a conic-constrained inverse problem mathematically isomorphic to quantum state tomography (QST): the Poincar\'{e}-Bloch map $S \mapsto \rho = \frac{1}{2}(I + S \cdot \sigma)$ sends each Stokes vector to a single-qubit density matrix, and the Lorentz cone constraint ($S_0 \geq ||S_{1:3}||$) enforced in the reconstruction is precisely the density-matrix positivity condition $\rho \succeq 0$.
+    \item Architected a GPU-accelerated consensus ADMM solver in PyTorch, executing exact joint proximal operators for $L_1$ spectral sparsity and closed-form Sherman-Morrison matrix inversions, scaling massive tensor operations across SLURM HPC clusters.
+    \item Calibrated optical point-spread-function (PSF) libraries utilizing spatial Gram-Schmidt orthogonalization to eliminate channel cross-talk and non-negative least squares (NNLS) for spectral unmixing.
 \end{cvitemize}
 
 \cvheading{Research Assistant}{Oct 2025 -- Present}{UVA (Prof. Liqin Ke's Group)}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Applied quantum mechanics principles to engineer complex Density Functional Theory (DFT) reconstruction algorithms, bridging theoretical atomic modeling with robust software implementations to accurately catalog electronic material properties.
-    \item Created immersive, browser-based data visualizations using Three.js and JSmol, generating interactive 3D atomic models and Kiviat diagrams to facilitate real-time structural inspection and validation.
-    \item Engineered a cloud-native machine learning pipeline utilizing Go and Next.js, enabling global academic collaborators to securely share specialized datasets and execute pre-trained predictive models.
+    \item Applied Density Functional Theory (DFT) to investigate transition-metal magnetic anisotropy and its fundamental relationships to structural motifs within complex crystal lattices.
+    \item Created immersive, browser-based data visualizations using Three.js and JSmol, generating interactive 3D atomic models to facilitate real-time structural inspection and theoretical validation.
+    \item Engineered a cloud-native machine learning pipeline utilizing Go and Next.js, enabling global academic collaborators to securely share specialized datasets and execute predictive models on quantum material properties.
+    \item Designing RareEarth DB, a rare-earth-focused analogue of the Materials Project: a MongoDB document architecture linking 4,648 curated magnetic-anisotropy measurements to ICSD/Pearson crystal structures, with a schema designed for Fireworks-orchestrated DFT workflows on UVA HPC; DOE funding proposal in preparation.
 \end{cvitemize}
 
-\cvheading{Research Intern}{May 2026 -- Present}{UVA Biocomplexity Institute}{Charlottesville, VA}
+\cvheading{Research Assistant}{Apr 2026 -- Present}{UVA BAL Lab (Prof. Xin Cynthia Tong's Group)}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Formulated massive-scale network simulations to dynamically model the stochastic spread of viral pathogens (e.g., COVID-19 and Ebola), implementing SEIR compartmental cascade models to capture heterogeneous transmission dynamics.
-    \item Engineered attention-based Graph Neural Network (GNN) architectures to predict multi-hop epidemic propagation pathways, leveraging spatiotemporal message-passing frameworks to extract predictive topological features from dynamic contact networks.
+    \item Engineered PRISM, a constrained optimization framework for multivariate longitudinal missing data imputation: an initial imputation is projected onto the FIML model-implied (mean, covariance) structure under a regularized objective that counteracts the variance attenuation inherent in unconstrained conditional-expectation imputation.
+    \item Built the solver engine in C++17 (RcppArmadillo): projected gradient descent with Armijo backtracking line search, exact mean-constraint enforcement via per-column zero-sum gradient projection, and KKT convergence certification computing per-column Lagrange multiplier estimates at every iterate.
+\end{cvitemize}
+
+\cvheading{Research Intern}{May 2026 -- Aug 2026}{UVA Biocomplexity Institute}{Charlottesville, VA}
+\begin{cvitemize}
+    \item Formulated massive-scale network simulations to dynamically model the stochastic spread of viral pathogens, implementing SEIR compartmental cascade models to capture heterogeneous transmission dynamics.
+    \item Engineered Graph Neural Network (GNN) architectures utilizing spatiotemporal message-passing frameworks to extract predictive topological features from dynamic contact networks.
 \end{cvitemize}
 
 % --- Open-Source Software ---
 \section{OPEN SOURCE SOFTWARE}
 \begin{cvitemize}
-    \item \textbf{smriti:} R package for automated longitudinal missing data imputation (available on CRAN). Executes a three-phase architecture combining missForest initialization with a custom C++ Lagrangian projection engine to strictly preserve the structural variance of the target covariance manifold.
-    \item \textbf{sanjaya:} Automated academic literature extraction pipeline utilizing the OpenAlex Academic Graph API, Scrapy, and Playwright to extract bilingual data, exporting structured CSV/JSON datasets for downstream interdisciplinary research.
-    \item \textbf{difi:} High-performance Go-based Git diff terminal user interface utilizing the Bubble Tea framework to streamline version control workflows; achieved official Homebrew Core inclusion, 342+ GitHub stars, and a \#5 ranking on Hacker News.
+    \item \textbf{stim (Contributor):} Authored pull request (\#1099) for the open-source quantum circuit simulation library, contributing to high-performance stabilizer circuit rendering and execution frameworks.
+    \item \textbf{smriti / PRISM:} Software framework for automated longitudinal missing data imputation. Executes an architecture combining initialization with a custom C++ Lagrangian projection engine to strictly preserve the structural variance of the target covariance manifold.
+    \item \textbf{sanjaya:} Automated academic literature extraction pipeline utilizing the OpenAlex Academic Graph API, Scrapy, and Playwright to extract bilingual data, exporting structured datasets for downstream interdisciplinary research.
+    \item \textbf{difi:} High-performance Go-based Git diff terminal user interface utilizing the Bubble Tea framework; achieved official Homebrew Core inclusion, 342+ GitHub stars, and a \#5 ranking on Hacker News.
 \end{cvitemize}
 
 % --- Awards ---
 \section{HONORS AND AWARDS}
 \begin{cvitemize}
+    \item \textbf{Double Hoo Research Grant}, University of Virginia, 2026
     \item \textbf{Dean's List of Distinguished Students}, University of Virginia
     \item \textbf{Silver Division}, USA Computing Olympiad (USACO)
 \end{cvitemize}
@@ -118,10 +131,10 @@
 % --- Skills ---
 \section{TECHNICAL SKILLS}
 \begin{cvitemize}
-    \item \textbf{Math \& Physics} Quantum Mechanics, Density Functional Theory (DFT), Linear \& Tensor Algebra, Real Analysis, ODEs
-    \item \textbf{Machine Learning \& AI:} PyTorch, TensorFlow, Keras, JAX, Scikit-Learn, XGBoost, Pandas, NumPy, OpenCV, RcppArmadillo
-    \item \textbf{Languages:} Python, C/C++, Rust, Go, TypeScript, R, Julia, SQL, Lua, Bash, Java, \LaTeX
-    \item \textbf{Infrastructure \& Cloud:} Linux (RHEL/Fedora), AWS (EC2, S3), Docker, Kubernetes, CUDA, Slurm HPC, Git
+    \item \textbf{Math \& Physics} Quantum Mechanics, Density Matrices \& POVMs, Quantum State Tomography, Density Functional Theory (DFT), Convex Optimization, Matrix Calculus.
+    \item \textbf{Machine Learning \& Computing:} PyTorch/CUDA, JAX, Scikit-Learn, Pandas, RcppArmadillo.
+    \item \textbf{Languages:} Python, C/C++, Julia, Rust, Go, TypeScript, R, SQL, Bash, \LaTeX.
+    \item \textbf{Infrastructure \& Cloud:} Linux (openSUSE/RHEL), Docker, K3s Kubernetes, Slurm HPC, Git.
 \end{cvitemize}
 
 % --- Service ---
