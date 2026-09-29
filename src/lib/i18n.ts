@@ -60,6 +60,7 @@ const dict: Record<Lang, Dict> = {
 		about2sheltie: 'Sheltie',
 		about2b:
 			". I'm completing my B.A. in Computer Science (Expected May 2027) at the University of Virginia.",
+		aboutName: 'My name, 希源 (Xīyuán), joins 希 — hope — with 源 — origin, a fountainhead.',
 		sections: {
 			experience: 'Experience',
 			projects: 'Projects',
@@ -127,8 +128,7 @@ const dict: Record<Lang, Dict> = {
 			},
 			zsweep: {
 				title: 'zsweep — Minesweeper with Vim Motions',
-				description:
-					'A terminal-based Minesweeper played entirely with Vim-style keyboard motions.'
+				description: 'A terminal-based Minesweeper played entirely with Vim-style keyboard motions.'
 			},
 			neovim: {
 				title: 'Neovim — Contributor',
@@ -174,6 +174,7 @@ const dict: Record<Lang, Dict> = {
 		about2a: '离开键盘之后，我练泰拳，也喜欢和我的',
 		about2sheltie: '喜乐蒂犬',
 		about2b: '待在一起。我预计于 2027 年 5 月在弗吉尼亚大学取得计算机科学学士学位。',
+		aboutName: '我的名字「希源」由「希」（希望）与「源」（源头、泉源）组成。',
 		sections: {
 			experience: '经历',
 			projects: '项目',
@@ -188,15 +189,13 @@ const dict: Record<Lang, Dict> = {
 				date: '2026 年 4 月 — 至今',
 				title: '研究助理',
 				company: 'UVA BAL Lab（Tong 教授课题组）',
-				description:
-					'PRISM：面向多元纵向缺失数据的 C++17 投影梯度下降引擎，带 KKT 收敛判定。'
+				description: 'PRISM：面向多元纵向缺失数据的 C++17 投影梯度下降引擎，带 KKT 收敛判定。'
 			},
 			yale: {
 				date: '2026 年 2 月 — 至今',
 				title: '研究助理',
 				company: '耶鲁大学（Liu 教授课题组）',
-				description:
-					'GPU 加速的锥约束 ADMM 无透镜光谱偏振重建——该问题与量子态层析在数学上同构。'
+				description: 'GPU 加速的锥约束 ADMM 无透镜光谱偏振重建——该问题与量子态层析在数学上同构。'
 			},
 			ke: {
 				date: '2025 年 10 月 — 至今',
@@ -209,8 +208,7 @@ const dict: Record<Lang, Dict> = {
 				date: '2026 年 5 月 — 2026 年 8 月',
 				title: '研究实习生',
 				company: 'UVA 生物复杂性研究所',
-				description:
-					'在大规模接触网络上进行 SEIR 流行病仿真，并用图神经网络预测病毒传播。'
+				description: '在大规模接触网络上进行 SEIR 流行病仿真，并用图神经网络预测病毒传播。'
 			}
 		},
 		proj: {
@@ -226,13 +224,11 @@ const dict: Record<Lang, Dict> = {
 			},
 			difi: {
 				title: 'difi — Git Diff 审查工具',
-				description:
-					'以键盘为中心的 Go 命令行工具，用于交互式 Git diff 审查，支持编辑器感知导航。'
+				description: '以键盘为中心的 Go 命令行工具，用于交互式 Git diff 审查，支持编辑器感知导航。'
 			},
 			stim: {
 				title: 'stim — 量子电路模拟器贡献者',
-				description:
-					'为量子纠错社区广泛使用的高性能稳定子电路模拟器贡献代码。'
+				description: '为量子纠错社区广泛使用的高性能稳定子电路模拟器贡献代码。'
 			},
 			sanjaya: {
 				title: 'sanjaya — 学术图谱流水线',
@@ -241,13 +237,11 @@ const dict: Record<Lang, Dict> = {
 			},
 			zsweep: {
 				title: 'zsweep — 带 Vim 键位的扫雷',
-				description:
-					'完全用 Vim 风格键盘操作游玩的终端扫雷游戏。'
+				description: '完全用 Vim 风格键盘操作游玩的终端扫雷游戏。'
 			},
 			neovim: {
 				title: 'Neovim — 贡献者',
-				description:
-					'向 Neovim 核心提交多个拉取请求，专注于 Lua 状态与 ENV 变量配置。'
+				description: '向 Neovim 核心提交多个拉取请求，专注于 Lua 状态与 ENV 变量配置。'
 			}
 		},
 		cert: {

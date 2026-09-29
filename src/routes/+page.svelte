@@ -133,12 +133,35 @@
 			href="/winter.JPG"
 			target="_blank"
 			rel="noreferrer"
-			class="text-cloud font-medium hover:text-reze transition-colors"
+			class="text-cloud hover:text-reze font-medium transition-colors"
 		>
 			{$t('about2sheltie')}
 		</a>
 		{$t('about2b')}
+		{$t('aboutName')}
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.6"
+			class="text-reze ml-1 inline-block h-4 w-4 align-[-2px]"
+			aria-hidden="true"
+		>
+			<path d="M2 12c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
+			<path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
+		</svg>
 	</p>
+
+	<blockquote class="border-reze/40 mt-6 border-l-2 pl-4">
+		<p class="text-cloud-dim leading-relaxed italic">
+			Your right is to action alone;<br />
+			Never to its fruits at anytime.
+		</p>
+		<cite class="text-cloud-dim/60 mt-2 block text-sm not-italic">
+			— Winthrop Sargeant, <em>The Bhagavad Gita</em>, 2009
+		</cite>
+	</blockquote>
 </section>
 
 <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
