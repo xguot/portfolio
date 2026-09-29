@@ -57,7 +57,7 @@
 					<img
 						src="/profile.jpg"
 						alt="Xiyuan (Tommy) Guo"
-						class="mb-6 size-24 rounded-full border-2 border-reze/40 object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:size-28"
+						class="border-reze/40 mb-6 size-24 rounded-full border-2 object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:size-28"
 					/>
 				</a>
 				<h1 class="text-cloud text-4xl font-bold tracking-tight sm:text-5xl">
@@ -66,10 +66,6 @@
 				<h2 class="text-cloud-dim mt-3 text-lg font-medium tracking-tight sm:text-xl">
 					{$t('subtitle')}
 				</h2>
-				<p class="text-cloud-dim mt-4 max-w-xs leading-normal">
-					{$t('tagline')}
-					<span class="text-reze ml-1 font-mono italic">ψ</span>
-				</p>
 
 				<nav class="mt-16 hidden lg:block">
 					<ul class="w-max">

@@ -52,15 +52,12 @@ const dict: Record<Lang, Dict> = {
 			experience: 'experience',
 			projects: 'projects'
 		},
-		tagline: 'A CS student who fancies quantum',
 		subtitle: 'Undergraduate Researcher · Quantum Computing · CS @ UVA',
 		about1:
-			"I'm a CS undergrad at UVA working at the intersection of quantum information and computational imaging — reconstructing spectro-polarimetric datacubes from lensless speckle images with a conic-constrained ADMM solver, a problem formally isomorphic to quantum state tomography via the Poincaré-Bloch map.",
-		about2a: 'AFK I do Muay Thai and hang out with my ',
-		about2sheltie: 'Sheltie',
-		about2b:
-			". I'm completing my B.A. in Computer Science (Expected May 2027) at the University of Virginia.",
-		aboutName: 'hope, and the wellspring whence all things flow.',
+			'I am a Computer Science student at UVA with a background in computational imaging and quantum information theory. Driven by my current graduate coursework in quantum computing, I am focused on bridging numerical methods with quantum theory to tackle foundational challenges in quantum computation.',
+		about2a: 'AFK I do Muay Thai with my ',
+		about2sheltie: 'sheltie',
+		aboutName: 'the wellspring of hope.',
 		sections: {
 			experience: 'Experience',
 			projects: 'Projects',
@@ -167,14 +164,12 @@ const dict: Record<Lang, Dict> = {
 			experience: '经历',
 			projects: '项目'
 		},
-		tagline: '一个痴迷量子的计算机系学生',
 		subtitle: '本科生研究者 · 量子计算 · 弗吉尼亚大学计算机系',
 		about1:
-			'我是弗吉尼亚大学计算机科学专业的本科生，研究方向处于量子信息与计算成像的交汇处：用带锥约束的 ADMM 求解器从无透镜散斑图像中重建光谱偏振数据立方体，该问题通过庞加莱-布洛赫映射与量子态层析在数学上同构。',
-		about2a: '离开键盘之后，我练泰拳，也喜欢和我的',
+			'我是弗吉尼亚大学计算机科学专业的学生，拥有计算成像与量子信息理论的背景。在目前量子计算研究生课程的推动下，我致力于将数值方法与量子理论相结合，以攻克量子计算中的基础性挑战。',
+		about2a: '离开键盘之后，我练泰拳，和我的',
 		about2sheltie: '喜乐蒂犬',
-		about2b: '待在一起。我预计于 2027 年 5 月在弗吉尼亚大学取得计算机科学学士学位。',
-		aboutName: '希望，与万物所自之源泉。',
+		aboutName: '希望之源泉。',
 		sections: {
 			experience: '经历',
 			projects: '项目',

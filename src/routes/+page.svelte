@@ -125,41 +125,56 @@
 	class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
 	aria-label="About me"
 >
-	<p class="text-cloud-dim mb-4 leading-relaxed">{$t('about1')}</p>
-
-	<p class="text-cloud-dim mb-4 leading-relaxed">
+	<p class="text-cloud-dim mb-4 max-w-prose leading-relaxed text-pretty">
 		<span class="text-cloud font-mono italic">
-			希源 (Xīyuán) <span class="text-reze">↦</span>
+			<span class="text-reze">|</span>Xīyuán<span class="text-reze">⟩</span>
+			<span class="text-reze">=</span>
 			<span class="text-reze">|</span>希<span class="text-reze">⟩</span>
 			<span class="text-reze">⊗</span>
 			<span class="text-reze">|</span>源<span class="text-reze">⟩</span>
+			<span class="text-reze">↦</span>
+			<span class="text-reze">|</span><svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.6"
+				stroke-linejoin="round"
+				class="text-reze inline-block h-4 w-4 align-[-2px]"
+				aria-hidden="true"
+			>
+				<path d="M12 3l1.9 5.8L19.7 12l-5.8 1.9L12 21l-1.9-5.8L4.3 12l5.8-1.9L12 3z"></path>
+			</svg><span class="text-reze">⟩</span>
+			<span class="text-reze">⊗</span>
+			<span class="text-reze">|</span><svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.6"
+				class="text-reze inline-block h-4 w-4 align-[-2px]"
+				aria-hidden="true"
+			>
+				<path d="M2 12c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
+				<path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
+			</svg><span class="text-reze">⟩</span>
 		</span>
 		<span> — {$t('aboutName')}</span>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="1.6"
-			class="text-reze ml-1 inline-block h-4 w-4 align-[-2px]"
-			aria-hidden="true"
-		>
-			<path d="M2 12c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
-			<path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
-		</svg>
 	</p>
+
+	<p class="text-cloud-dim mb-4 max-w-prose leading-relaxed text-pretty">{$t('about1')}</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
 		{$t('about2a')}
+		{$t('about2sheltie')}
 		<a
 			href="/winter.JPG"
 			target="_blank"
 			rel="noreferrer"
 			class="text-cloud hover:text-reze font-medium transition-colors"
 		>
-			{$t('about2sheltie')}
+			∪･ω･∪
 		</a>
-		{$t('about2b')}
 	</p>
 
 	<blockquote class="border-reze/40 mt-6 border-l-2 pl-4">
