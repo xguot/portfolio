@@ -57,7 +57,7 @@
 			description: $t('proj.difi.description'),
 			tags: ['Go', 'Bubble Tea', 'Git API', 'CLI', 'Nvim Plugin'],
 			link: 'https://difi.vercel.app/',
-			stars: 342,
+			stars: 364,
 			thumbnail: '/difi-demo.gif',
 			hnRanking: 5,
 			hnLink: 'https://news.ycombinator.com/item?id=46870917'
