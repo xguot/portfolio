@@ -56,7 +56,7 @@
 			title: $t('proj.difi.title'),
 			description: $t('proj.difi.description'),
 			tags: ['Go', 'Bubble Tea', 'Git API', 'CLI', 'Nvim Plugin'],
-			link: 'https://github.com/xguot/difi',
+			link: 'https://difi.vercel.app/',
 			stars: 342,
 			thumbnail: '/difi-demo.gif',
 			hnRanking: 5,
