@@ -52,7 +52,7 @@ const dict: Record<Lang, Dict> = {
 			experience: 'experience',
 			projects: 'projects'
 		},
-		subtitle: 'Undergraduate Researcher · Quantum Computing · CS @ UVA',
+		subtitle: 'Quantum Computing · UVA Computer Science',
 		about1:
 			'I am a Computer Science student at UVA with a background in computational imaging and quantum information theory. Driven by my current graduate coursework in quantum computing, I am focused on bridging numerical methods with quantum theory to tackle foundational challenges in quantum computation.',
 		about2a: 'AFK I do Muay Thai with my ',
@@ -164,7 +164,7 @@ const dict: Record<Lang, Dict> = {
 			experience: '经历',
 			projects: '项目'
 		},
-		subtitle: '本科生研究者 · 量子计算 · 弗吉尼亚大学计算机系',
+		subtitle: '量子计算 · 弗吉尼亚大学计算机科学',
 		about1:
 			'我是弗吉尼亚大学计算机科学专业的学生，拥有计算成像与量子信息理论的背景。在目前量子计算研究生课程的推动下，我致力于将数值方法与量子理论相结合，以攻克量子计算中的基础性挑战。',
 		about2a: '离开键盘之后，我练泰拳，和我的',
