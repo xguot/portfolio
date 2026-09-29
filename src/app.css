@@ -2,22 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@keyframes sway {
-	0%,
-	100% {
-		transform: translateX(0) rotate(0deg);
-	}
-	30% {
-		transform: translateX(1.5px) rotate(5deg);
-	}
-	60% {
-		transform: translateX(-1.5px) rotate(-5deg);
-	}
-	80% {
-		transform: translateX(0.75px) rotate(2deg);
-	}
-}
-
 @theme {
 	/* Day theme: white with teal/mint accents */
 	--color-bg-main: #fdfefd;
@@ -32,8 +16,6 @@
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, sans-serif;
 	--font-mono: 'Fira Code', monospace;
-
-	--animate-sway: sway 0.9s ease-in-out infinite;
 }
 
 /* Night theme: total black, brighter text, mint green glow */
