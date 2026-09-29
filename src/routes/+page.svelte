@@ -128,17 +128,13 @@
 	<p class="text-cloud-dim mb-4 leading-relaxed">{$t('about1')}</p>
 
 	<p class="text-cloud-dim mb-4 leading-relaxed">
-		{$t('about2a')}
-		<a
-			href="/winter.JPG"
-			target="_blank"
-			rel="noreferrer"
-			class="text-cloud hover:text-reze font-medium transition-colors"
-		>
-			{$t('about2sheltie')}
-		</a>
-		{$t('about2b')}
-		{$t('aboutName')}
+		<span class="text-cloud font-mono italic">
+			希源 (Xīyuán) <span class="text-reze">↦</span>
+			<span class="text-reze">|</span>希<span class="text-reze">⟩</span>
+			<span class="text-reze">⊗</span>
+			<span class="text-reze">|</span>源<span class="text-reze">⟩</span>
+		</span>
+		<span> — {$t('aboutName')}</span>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
@@ -151,6 +147,19 @@
 			<path d="M2 12c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
 			<path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"></path>
 		</svg>
+	</p>
+
+	<p class="text-cloud-dim mb-4 leading-relaxed">
+		{$t('about2a')}
+		<a
+			href="/winter.JPG"
+			target="_blank"
+			rel="noreferrer"
+			class="text-cloud hover:text-reze font-medium transition-colors"
+		>
+			{$t('about2sheltie')}
+		</a>
+		{$t('about2b')}
 	</p>
 
 	<blockquote class="border-reze/40 mt-6 border-l-2 pl-4">

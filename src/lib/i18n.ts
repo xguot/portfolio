@@ -56,11 +56,11 @@ const dict: Record<Lang, Dict> = {
 		subtitle: 'Undergraduate Researcher · Quantum Computing · CS @ UVA',
 		about1:
 			"I'm a CS undergrad at UVA working at the intersection of quantum information and computational imaging — reconstructing spectro-polarimetric datacubes from lensless speckle images with a conic-constrained ADMM solver, a problem formally isomorphic to quantum state tomography via the Poincaré-Bloch map.",
-		about2a: 'Away from the keyboard I do Muay Thai and hang out with my ',
+		about2a: 'AFK I do Muay Thai and hang out with my ',
 		about2sheltie: 'Sheltie',
 		about2b:
 			". I'm completing my B.A. in Computer Science (Expected May 2027) at the University of Virginia.",
-		aboutName: 'My name, 希源 (Xīyuán), joins 希 — hope — with 源 — origin, a fountainhead.',
+		aboutName: 'hope, and the wellspring whence all things flow.',
 		sections: {
 			experience: 'Experience',
 			projects: 'Projects',
@@ -174,7 +174,7 @@ const dict: Record<Lang, Dict> = {
 		about2a: '离开键盘之后，我练泰拳，也喜欢和我的',
 		about2sheltie: '喜乐蒂犬',
 		about2b: '待在一起。我预计于 2027 年 5 月在弗吉尼亚大学取得计算机科学学士学位。',
-		aboutName: '我的名字「希源」由「希」（希望）与「源」（源头、泉源）组成。',
+		aboutName: '希望，与万物所自之源泉。',
 		sections: {
 			experience: '经历',
 			projects: '项目',
