@@ -27,7 +27,7 @@
 			company: $t('exp.ke.company'),
 			description: $t('exp.ke.description'),
 			skills: ['DFT', 'MongoDB', 'Fireworks', 'Go', 'Three.js', 'Quantum Materials'],
-			link: 'https://www.virginia.edu/'
+			link: 'https://engineering.virginia.edu/faculty/liqin-ke'
 		},
 		{
 			date: $t('exp.biocomplexity.date'),
