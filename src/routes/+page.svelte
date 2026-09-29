@@ -265,6 +265,112 @@
 	</div>
 </section>
 
+<section id="talks" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+	<div
+		class="bg-bg-main/75 sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+	>
+		<h2 class="text-cloud text-sm font-bold tracking-widest uppercase lg:sr-only">
+			{$t('sections.talks')}
+		</h2>
+	</div>
+	<div class="flex flex-col gap-10">
+		<article class="group grid overflow-hidden rounded-md sm:grid-cols-8 sm:gap-8 md:gap-4">
+			<a
+				href="https://youtu.be/6Ay2lwDMxpI"
+				target="_blank"
+				rel="noreferrer"
+				class="z-10 mb-4 w-32 pt-1 sm:col-span-3 sm:mb-0 sm:w-auto"
+			>
+				<div class="border-cloud-dim/10 bg-bg-card overflow-hidden rounded border-2 shadow-2xl">
+					<img
+						src="/cyberchat.jpg"
+						alt={$t('talks.cyberchat.title')}
+						loading="lazy"
+						decoding="async"
+						class="h-auto w-full opacity-90 grayscale-0 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 sm:opacity-80 sm:grayscale"
+					/>
+				</div>
+			</a>
+			<div class="relative z-10 flex flex-col justify-center sm:col-span-5">
+				<h3 class="text-cloud text-lg leading-snug font-medium">
+					{$t('talks.cyberchat.title')}
+				</h3>
+				<p class="text-cloud-dim mt-2 text-sm leading-relaxed">
+					{$t('talks.cyberchat.description')}
+				</p>
+				<a
+					href="https://youtu.be/6Ay2lwDMxpI"
+					target="_blank"
+					rel="noreferrer"
+					class="group text-cloud hover:text-reze mt-3 inline-flex items-center leading-tight font-semibold transition-colors"
+				>
+					<span class="group-hover:border-reze border-b border-transparent pb-px transition">
+						{$t('talks.cyberchat.watch')}
+					</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+						class="ml-1 h-4 w-4 shrink-0 transition-transform group-hover:translate-x-2"
+						><path
+							fill-rule="evenodd"
+							d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.5a.75.75 0 010 1.08l-5.5 5.5a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+							clip-rule="evenodd"
+						/></svg
+					>
+				</a>
+			</div>
+		</article>
+		<article class="group grid overflow-hidden rounded-md sm:grid-cols-8 sm:gap-8 md:gap-4">
+			<a
+				href="https://youtu.be/lS-xTCjV5kc"
+				target="_blank"
+				rel="noreferrer"
+				class="z-10 mb-4 w-32 pt-1 sm:col-span-3 sm:mb-0 sm:w-auto"
+			>
+				<div class="border-cloud-dim/10 bg-bg-card overflow-hidden rounded border-2 shadow-2xl">
+					<img
+						src="/cyberchat-extended.jpg"
+						alt={$t('talks.extended.title')}
+						loading="lazy"
+						decoding="async"
+						class="h-auto w-full opacity-90 grayscale-0 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 sm:opacity-80 sm:grayscale"
+					/>
+				</div>
+			</a>
+			<div class="relative z-10 flex flex-col justify-center sm:col-span-5">
+				<h3 class="text-cloud text-lg leading-snug font-medium">
+					{$t('talks.extended.title')}
+				</h3>
+				<p class="text-cloud-dim mt-2 text-sm leading-relaxed">
+					{$t('talks.extended.description')}
+				</p>
+				<a
+					href="https://youtu.be/lS-xTCjV5kc"
+					target="_blank"
+					rel="noreferrer"
+					class="group text-cloud hover:text-reze mt-3 inline-flex items-center leading-tight font-semibold transition-colors"
+				>
+					<span class="group-hover:border-reze border-b border-transparent pb-px transition">
+						{$t('talks.extended.watch')}
+					</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+						class="ml-1 h-4 w-4 shrink-0 transition-transform group-hover:translate-x-2"
+						><path
+							fill-rule="evenodd"
+							d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.5a.75.75 0 010 1.08l-5.5 5.5a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+							clip-rule="evenodd"
+						/></svg
+					>
+				</a>
+			</div>
+		</article>
+	</div>
+</section>
+
 <section
 	id="certifications"
 	class="group/list mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"

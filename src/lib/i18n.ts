@@ -50,7 +50,8 @@ const dict: Record<Lang, Dict> = {
 		nav: {
 			about: 'about',
 			experience: 'experience',
-			projects: 'projects'
+			projects: 'projects',
+			talks: 'talks'
 		},
 		subtitle: 'Quantum Computing · UVA Computer Science',
 		about1:
@@ -61,7 +62,22 @@ const dict: Record<Lang, Dict> = {
 		sections: {
 			experience: 'Experience',
 			projects: 'Projects',
+			talks: 'Talks',
 			certifications: 'Certifications'
+		},
+		talks: {
+			cyberchat: {
+				title: 'Cyber Chat — The Quantum Threat and Post-Quantum Defense',
+				description:
+					"A compact talk on the quantum threat landscape, Landauer's principle, and reversible computation as the road to post-quantum defense.",
+				watch: 'Watch (5 min)'
+			},
+			extended: {
+				title: 'Cyber Chat Extended — Thermodynamics, Matrices, and the Collapse of RSA',
+				description:
+					"The extended version: the thermodynamics of computation, matrix mechanics, and how RSA collapses under Shor's algorithm.",
+				watch: 'Watch (15 min)'
+			}
 		},
 		viewCV: 'View Full CV',
 		viewAll: 'View All Projects',
@@ -162,7 +178,8 @@ const dict: Record<Lang, Dict> = {
 		nav: {
 			about: '关于',
 			experience: '经历',
-			projects: '项目'
+			projects: '项目',
+			talks: '讲座'
 		},
 		subtitle: '量子计算 · 弗吉尼亚大学计算机科学',
 		about1:
@@ -173,7 +190,20 @@ const dict: Record<Lang, Dict> = {
 		sections: {
 			experience: '经历',
 			projects: '项目',
+			talks: '讲座',
 			certifications: '证书'
+		},
+		talks: {
+			cyberchat: {
+				title: 'Cyber Chat — 量子威胁与后量子防御',
+				description: '量子威胁格局速览：兰道尔原理、可逆计算，以及通往后量子防御之路。',
+				watch: '观看（5 分钟）'
+			},
+			extended: {
+				title: 'Cyber Chat Extended — 热力学、矩阵与 RSA 的崩塌',
+				description: '加长版：计算热力学、矩阵力学，以及 RSA 如何在 Shor 算法面前崩塌。',
+				watch: '观看（15 分钟）'
+			}
 		},
 		viewCV: '查看完整简历',
 		viewAll: '查看所有项目',

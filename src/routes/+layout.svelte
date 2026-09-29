@@ -69,7 +69,7 @@
 
 				<nav class="mt-16 hidden lg:block">
 					<ul class="w-max">
-						{#each ['about', 'experience', 'projects'] as item}
+						{#each ['about', 'experience', 'projects', 'talks'] as item}
 							<li>
 								<a
 									href="#{item}"
