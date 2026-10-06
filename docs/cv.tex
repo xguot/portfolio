@@ -53,13 +53,13 @@
 
 % --- Scientific Focus ---
 \section{RESEARCH FOCUS}
-\noindent Convex optimization (ADMM); projection-based imputation algorithms; high-performance C++ solver engineering; computational imaging; quantum software infrastructure.
+\noindent Convex optimization; computational imaging; missing-data imputation; quantum error correction.
 
 % --- Education ---
 \section{EDUCATION}
 \cvheading{University of Virginia}{Expected May 2027}{B.A. in Computer Science}{Charlottesville, VA}
 \begin{cvitemize}
-    \item \textbf{GPA:} 3.89/4.00
+    \item \textbf{GPA:} 3.73/4.00
     \item \textbf{Advanced Physics \& Quantum Coursework:} Graduate Quantum Computing (PHYS 5880, in progress); Quantum Information \& Computation (completed Caltech PH219A curriculum); Theoretical Quantum Mechanics (completed Griffiths and Sakurai curricula).
 \end{cvitemize}
 \cvheading{Kimball Union Academy}{2024}{High School Diploma}{Meriden, NH}
@@ -84,39 +84,40 @@
 
 \cvheading{Research Assistant}{Feb 2026 -- Present}{Yale University (Prof. Mengxia Liu's Group)}{New Haven, CT}
 \begin{cvitemize}
-    \item Engineered a joint spectro-polarimetric forward model to recover a 324-channel scene datacube (spatial $\times$ 81 wavelengths $\times$ 4 Stokes channels) from a single multiplexed lensless speckle image.
-    \item Formulated a conic-constrained inverse problem mathematically isomorphic to quantum state tomography (QST): the Poincar\'{e}-Bloch map $S \mapsto \rho = \frac{1}{2}(I + S \cdot \sigma)$ sends each Stokes vector to a single-qubit density matrix, and the Lorentz cone constraint ($S_0 \geq ||S_{1:3}||$) enforced in the reconstruction is precisely the density-matrix positivity condition $\rho \succeq 0$.
-    \item Architected a GPU-accelerated consensus ADMM solver in PyTorch, executing exact joint proximal operators for $L_1$ spectral sparsity and closed-form Sherman-Morrison matrix inversions, scaling massive tensor operations across SLURM HPC clusters.
-    \item Calibrated optical point-spread-function (PSF) libraries utilizing spatial Gram-Schmidt orthogonalization to eliminate channel cross-talk and non-negative least squares (NNLS) for spectral unmixing.
+    \item Built a joint spectro-polarimetric forward model recovering a 324-channel datacube (spatial $\times$ 81 wavelengths $\times$ 4 Stokes parameters) from a single multiplexed lensless speckle image.
+    \item Formulated the reconstruction as a conic-constrained inverse problem: enforcing a Lorentz cone constraint on the Stokes vector ($S_0 \geq \|S_{1:3}\|$) to guarantee physical polarization states.
+    \item Implemented a consensus ADMM solver in PyTorch with $L_1$ spectral sparsity and Sherman--Morrison linear solves; runs on GPU via SLURM.
+    \item Calibrated PSF libraries using Gram--Schmidt orthogonalization to remove channel cross-talk; spectral unmixing via non-negative least squares.
 \end{cvitemize}
 
 \cvheading{Research Assistant}{Oct 2025 -- Present}{UVA (Prof. Liqin Ke's Group)}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Applied Density Functional Theory (DFT) to investigate transition-metal magnetic anisotropy and its fundamental relationships to structural motifs within complex crystal lattices.
-    \item Created immersive, browser-based data visualizations using Three.js and JSmol, generating interactive 3D atomic models to facilitate real-time structural inspection and theoretical validation.
-    \item Engineered a cloud-native machine learning pipeline utilizing Go and Next.js, enabling global academic collaborators to securely share specialized datasets and execute predictive models on quantum material properties.
-    \item Designing RareEarth DB, a rare-earth-focused analogue of the Materials Project: a MongoDB document architecture linking 4,648 curated magnetic-anisotropy measurements to ICSD/Pearson crystal structures, with a schema designed for Fireworks-orchestrated DFT workflows on UVA HPC; DOE funding proposal in preparation.
+    \item Used Density Functional Theory (DFT) to study transition-metal magnetic anisotropy and its relationship to structural motifs in crystal lattices.
+    \item Built interactive 3D atomic-structure visualizations (Three.js, JSmol) for real-time structural inspection.
+    \item Developed a shared ML pipeline (Go, Next.js) for collaborators to run predictive models on magnetic-property datasets.
+    \item Designing RareEarth DB, a rare-earth analogue of the Materials Project: 4,648 curated anisotropy measurements linked to ICSD/Pearson structures, with Fireworks-orchestrated DFT workflows on UVA HPC; DOE funding proposal in preparation.
 \end{cvitemize}
 
 \cvheading{Research Assistant}{Apr 2026 -- Present}{UVA BAL Lab (Prof. Xin Cynthia Tong's Group)}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Engineered PRISM, a constrained optimization framework for multivariate longitudinal missing data imputation: an initial imputation is projected onto the FIML model-implied (mean, covariance) structure under a regularized objective that counteracts the variance attenuation inherent in unconstrained conditional-expectation imputation.
-    \item Built the solver engine in C++17 (RcppArmadillo): projected gradient descent with Armijo backtracking line search, exact mean-constraint enforcement via per-column zero-sum gradient projection, and KKT convergence certification computing per-column Lagrange multiplier estimates at every iterate.
+    \item Developed PRISM, a constrained optimization framework for multivariate longitudinal missing-data imputation: projects initial imputations onto the model-implied covariance structure to correct the variance attenuation of standard conditional-expectation methods.
+    \item Built the solver in C++17 (RcppArmadillo): projected gradient descent with Armijo line search, exact mean-constraint projection, and KKT convergence checks.
 \end{cvitemize}
 
 \cvheading{Research Intern}{May 2026 -- Aug 2026}{UVA Biocomplexity Institute}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Formulated massive-scale network simulations to dynamically model the stochastic spread of viral pathogens, implementing SEIR compartmental cascade models to capture heterogeneous transmission dynamics.
-    \item Engineered Graph Neural Network (GNN) architectures utilizing spatiotemporal message-passing frameworks to extract predictive topological features from dynamic contact networks.
+    \item Engineered a Julia simulation engine for Independent Cascade diffusion and trained PyTorch Geometric GCNs to estimate total epidemic cascade size from sparse, partially observed network infections.
+    \item Developed an agentic workflow engine (Pydantic AI, NetworkX) translating natural-language queries into verified execution DAGs for network-analysis pipelines, with deterministic validation and graph deduplication cutting redundant computation by $>40\%$.
 \end{cvitemize}
 
 % --- Open-Source Software ---
 \section{OPEN SOURCE SOFTWARE}
 \begin{cvitemize}
-    \item \textbf{stim (Contributor):} Authored pull request (\#1099) for the open-source quantum circuit simulation library, contributing to high-performance stabilizer circuit rendering and execution frameworks.
-    \item \textbf{smriti / PRISM:} Software framework for automated longitudinal missing data imputation. Executes an architecture combining initialization with a custom C++ Lagrangian projection engine to strictly preserve the structural variance of the target covariance manifold.
-    \item \textbf{sanjaya:} Automated academic literature extraction pipeline utilizing the OpenAlex Academic Graph API, Scrapy, and Playwright to extract bilingual data, exporting structured datasets for downstream interdisciplinary research.
-    \item \textbf{difi:} High-performance Go-based Git diff terminal user interface utilizing the Bubble Tea framework; achieved official Homebrew Core inclusion, 342+ GitHub stars, and a \#5 ranking on Hacker News.
+    \item \textbf{stim:} Authored PR \#1099 to the quantum stabilizer circuit simulator (Google; accepted in review).
+    \item \textbf{PRISM:} C++17 constrained-optimization engine for longitudinal missing-data imputation (see research above).
+    \item \textbf{qudec:} Simulation toolkit for quantum LDPC decoding (BP+OSD, LP, ADMM); characterized BP failure modes on degenerate codes and benchmarked decoders under phenomenological noise.
+    \item \textbf{sanjaya:} Academic literature extraction pipeline (OpenAlex API, Scrapy, Playwright) for structured bilingual dataset export.
+    \item \textbf{difi:} Go-based Git diff TUI; Homebrew Core, 365+ GitHub stars, \#5 on Hacker News.
 \end{cvitemize}
 
 % --- Awards ---
