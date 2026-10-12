@@ -69,6 +69,12 @@
 			link: 'https://github.com/quantumlib/stim'
 		},
 		{
+			title: $t('proj.qudec.title'),
+			description: $t('proj.qudec.description'),
+			tags: ['Quantum Computing', 'PyTorch', 'ADMM', 'Quantum LDPC'],
+			link: 'https://github.com/xguot/qudec'
+		},
+		{
 			title: $t('proj.sanjaya.title'),
 			description: $t('proj.sanjaya.description'),
 			tags: ['Python', 'Scrapy', 'Playwright', 'Data Engineering', 'Academic Graph'],

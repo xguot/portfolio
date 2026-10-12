@@ -132,7 +132,12 @@ const dict: Record<Lang, Dict> = {
 			stim: {
 				title: 'stim — Quantum Circuit Simulator Contributor',
 				description:
-					'Contributed to the high-performance stabilizer circuit simulator used across the quantum error correction community.'
+					'Authored pull request #1099 to Stim, Google\'s open-source quantum stabilizer circuit simulator — accepted by the maintainers.'
+			},
+			qudec: {
+				title: 'qudec — Quantum LDPC Decoding Toolkit',
+				description:
+					'LP and batched PyTorch ADMM decoders for quantum LDPC codes, benchmarked against BP+OSD on bivariate bicycle codes under code-capacity and phenomenological noise.'
 			},
 			sanjaya: {
 				title: 'sanjaya — Academic Graph Pipeline',
@@ -253,7 +258,12 @@ const dict: Record<Lang, Dict> = {
 			},
 			stim: {
 				title: 'stim — 量子电路模拟器贡献者',
-				description: '为量子纠错社区广泛使用的高性能稳定子电路模拟器贡献代码。'
+				description: '向 Google 开源量子稳定子电路模拟器 Stim 提交拉取请求 #1099，已被维护者采纳。'
+			},
+			qudec: {
+				title: 'qudec — 量子 LDPC 解码工具包',
+				description:
+					'面向量子 LDPC 码的 LP 与批量 PyTorch ADMM 解码器，在双变量自行车码上与 BP+OSD 基准对比，覆盖码容量噪声与现象学噪声。'
 			},
 			sanjaya: {
 				title: 'sanjaya — 学术图谱流水线',
