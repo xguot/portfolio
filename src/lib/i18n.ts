@@ -89,40 +89,40 @@ const dict: Record<Lang, Dict> = {
 				title: 'Research Assistant',
 				company: 'UVA BAL Lab (Prof. Tong)',
 				description:
-					'PRISM: C++17 projected-gradient-descent engine for multivariate longitudinal missing data, with KKT convergence certification.'
+					'PRISM: C++17 projected-gradient solver for longitudinal-data imputation, with mean constraints, covariance-target regularization, and first-order stationarity diagnostics.'
 			},
 			yale: {
 				date: 'FEB 2026 — PRESENT',
 				title: 'Research Assistant',
 				company: "Yale (Prof. Liu's Group)",
 				description:
-					'GPU-accelerated conic-constrained ADMM for lensless spectro-polarimetric reconstruction — a problem formally isomorphic to quantum state tomography.'
+					'GPU-accelerated ADMM for lensless spectro-polarimetric reconstruction, with physical cone constraints that share a positive-semidefinite structure with quantum-state reconstruction.'
 			},
 			ke: {
 				date: 'OCT 2025 — PRESENT',
 				title: 'Research Assistant',
 				company: "UVA (Prof. Ke's Group)",
 				description:
-					'DFT for rare-earth magnetic anisotropy; designing RareEarth DB, a MongoDB + Fireworks materials database on UVA HPC.'
+					'DFT calculations for rare-earth magnetic anisotropy; designed the schema, API, and web interface for RareEarth DB, linking 4,648 measurements to crystal structures.'
 			},
 			biocomplexity: {
 				date: 'MAY 2026 — AUG 2026',
 				title: 'Research Intern',
 				company: 'UVA Biocomplexity Institute',
 				description:
-					'SEIR epidemic simulations and graph neural networks for viral spread prediction on large contact networks.'
+					'Built a Julia Independent Cascade simulator and PyTorch Geometric graph convolutional networks for cascade-size estimation from sparse observations; developed a workflow prototype with DAG validation and deduplication.'
 			}
 		},
 		proj: {
 			lensless: {
-				title: 'lensless-recon — Conic-Constrained QST Solver',
+				title: 'lensless-recon — Spectro-Polarimetric Imaging Solver',
 				description:
-					'GPU-accelerated ADMM solver recovering a 324-channel spectro-polarimetric datacube from a single lensless speckle image — a problem isomorphic to quantum state tomography via the Poincaré-Bloch map.'
+					'GPU-accelerated ADMM for estimating an 81-band, four-Stokes datacube from a lensless speckle image under physical cone constraints and spectral-sparsity priors.'
 			},
 			prism: {
 				title: 'prism — Projected Gradient Imputation Engine',
 				description:
-					'C++17 (RcppArmadillo) solver projecting longitudinal missing data onto the FIML mean and covariance structure, with KKT-certified projected gradient descent.'
+					'C++17 (RcppArmadillo) imputation solver using projected gradient descent, FIML mean constraints, covariance-target regularization, and first-order stationarity diagnostics.'
 			},
 			difi: {
 				title: 'difi — Git Diff Review Tool',
@@ -130,14 +130,14 @@ const dict: Record<Lang, Dict> = {
 					'A keyboard-centric Go CLI for interactive Git diff reviews with editor-aware navigation.'
 			},
 			stim: {
-				title: 'stim — Quantum Circuit Simulator Contributor',
+				title: 'stim — Quantum Simulator Pull Request',
 				description:
-					'Authored pull request #1099 to Stim, Google\'s open-source quantum stabilizer circuit simulator — accepted by the maintainers.'
+					'Submitted pull request #1099 to Stim, Google\'s open-source quantum stabilizer circuit simulator; under maintainer review.'
 			},
 			qudec: {
 				title: 'qudec — Quantum LDPC Decoding Toolkit',
 				description:
-					'LP and batched PyTorch ADMM decoders for quantum LDPC codes, benchmarked against BP+OSD on bivariate bicycle codes under code-capacity and phenomenological noise.'
+					'LP and batched PyTorch ADMM decoders for quantum LDPC codes: LP evaluated under code-capacity noise and ADMM variants under phenomenological noise, with BP+OSD comparisons on bivariate bicycle codes.'
 			},
 			sanjaya: {
 				title: 'sanjaya — Academic Graph Pipeline',
@@ -159,19 +159,19 @@ const dict: Record<Lang, Dict> = {
 				title: 'AWS Certified AI Practitioner',
 				issuer: 'Amazon Web Services',
 				description:
-					'Validated expertise in deploying production-grade AI solutions on AWS. Focused on prompt engineering, fine-tuning Foundation Models via Amazon Bedrock, and implementing low-latency inference pipelines for real-time financial data processing.'
+					'Foundational AWS certification in artificial intelligence, machine learning, and generative AI concepts and use cases.'
 			},
 			cloud: {
 				title: 'AWS Certified Cloud Practitioner',
 				issuer: 'Amazon Web Services',
 				description:
-					'Mastery of the AWS Well-Architected Framework, emphasizing security, high availability, and performance efficiency. Architected cloud-native environments leveraging Amazon Aurora for relational data and EC2/Lambda for scalable compute logic.'
+					'Foundational AWS certification in cloud concepts, services, and terminology.'
 			},
 			usaco: {
 				title: 'USACO Silver Division',
 				issuer: 'USA Computing Olympiad',
 				description:
-					'Competed in high-stakes algorithmic challenges focusing on computational efficiency and data structure optimization. Solved complex problems requiring O(n log n) performance using greedy algorithms, dynamic programming, and graph theory.'
+					'Competed in the USACO Silver division, developing algorithmic problem-solving skills.'
 			}
 		},
 		socials: 'Social media links',
@@ -219,51 +219,51 @@ const dict: Record<Lang, Dict> = {
 				date: '2026 年 4 月 — 至今',
 				title: '研究助理',
 				company: 'UVA BAL Lab（Tong 教授课题组）',
-				description: 'PRISM：面向多元纵向缺失数据的 C++17 投影梯度下降引擎，带 KKT 收敛判定。'
+				description: 'PRISM：面向纵向缺失数据的 C++17 投影梯度插补求解器，包含均值约束、协方差目标正则化和一阶驻点诊断。'
 			},
 			yale: {
 				date: '2026 年 2 月 — 至今',
 				title: '研究助理',
 				company: '耶鲁大学（Liu 教授课题组）',
-				description: 'GPU 加速的锥约束 ADMM 无透镜光谱偏振重建——该问题与量子态层析在数学上同构。'
+				description: 'GPU 加速的 ADMM 无透镜光谱偏振重建，采用与量子态重建共享半正定结构的物理锥约束。'
 			},
 			ke: {
 				date: '2025 年 10 月 — 至今',
 				title: '研究助理',
 				company: 'UVA（Ke 教授课题组）',
 				description:
-					'稀土磁各向异性的 DFT 计算；设计 RareEarth DB——基于 MongoDB 与 Fireworks 的 UVA HPC 材料数据库。'
+					'开展稀土磁各向异性的 DFT 计算；设计 RareEarth DB 的数据库结构、API 和网页界面，将 4,648 条测量记录与晶体结构关联。'
 			},
 			biocomplexity: {
 				date: '2026 年 5 月 — 2026 年 8 月',
 				title: '研究实习生',
 				company: 'UVA 生物复杂性研究所',
-				description: '在大规模接触网络上进行 SEIR 流行病仿真，并用图神经网络预测病毒传播。'
+				description: '构建 Julia 独立级联模拟器与 PyTorch Geometric 图卷积网络，从稀疏观测估计级联规模；开发带执行 DAG 验证与去重的工作流原型。'
 			}
 		},
 		proj: {
 			lensless: {
-				title: 'lensless-recon — 锥约束 QST 求解器',
+				title: 'lensless-recon — 光谱偏振成像求解器',
 				description:
-					'GPU 加速的 ADMM 求解器，从单张无透镜散斑图像恢复 324 通道光谱偏振数据立方体，该问题通过庞加莱-布洛赫映射与量子态层析同构。'
+					'GPU 加速的 ADMM 求解器，在物理锥约束与光谱稀疏先验下，从无透镜散斑图像估计 81 波段、4 个 Stokes 分量的数据立方体。'
 			},
 			prism: {
 				title: 'prism — 投影梯度插补引擎',
 				description:
-					'C++17（RcppArmadillo）求解器，将纵向缺失数据投影到 FIML 均值与协方差结构上，采用带 KKT 收敛判定的投影梯度下降。'
+					'C++17（RcppArmadillo）插补求解器，采用投影梯度下降、FIML 均值约束、协方差目标正则化和一阶驻点诊断。'
 			},
 			difi: {
 				title: 'difi — Git Diff 审查工具',
 				description: '以键盘为中心的 Go 命令行工具，用于交互式 Git diff 审查，支持编辑器感知导航。'
 			},
 			stim: {
-				title: 'stim — 量子电路模拟器贡献者',
-				description: '向 Google 开源量子稳定子电路模拟器 Stim 提交拉取请求 #1099，已被维护者采纳。'
+				title: 'stim — 量子模拟器拉取请求',
+				description: '向 Google 开源量子稳定子电路模拟器 Stim 提交拉取请求 #1099，目前处于维护者审查阶段。'
 			},
 			qudec: {
 				title: 'qudec — 量子 LDPC 解码工具包',
 				description:
-					'面向量子 LDPC 码的 LP 与批量 PyTorch ADMM 解码器，在双变量自行车码上与 BP+OSD 基准对比，覆盖码容量噪声与现象学噪声。'
+					'面向量子 LDPC 码的 LP 与批量 PyTorch ADMM 解码器：在码容量噪声下评估 LP，在现象学噪声下评估 ADMM 变体，并在双变量自行车码上与 BP+OSD 对比。'
 			},
 			sanjaya: {
 				title: 'sanjaya — 学术图谱流水线',
@@ -284,19 +284,19 @@ const dict: Record<Lang, Dict> = {
 				title: 'AWS 认证 AI 从业者',
 				issuer: 'Amazon Web Services',
 				description:
-					'验证了在 AWS 上部署生产级 AI 解决方案的能力。专注于提示工程、通过 Amazon Bedrock 微调基础模型，以及为实时金融数据处理实现低延迟推理流水线。'
+					'AWS 基础级认证，涵盖人工智能、机器学习与生成式 AI 的概念和应用场景。'
 			},
 			cloud: {
 				title: 'AWS 认证云从业者',
 				issuer: 'Amazon Web Services',
 				description:
-					'掌握 AWS Well-Architected 框架，注重安全、高可用与性能效率。架构了云原生环境，使用 Amazon Aurora 存储关系数据，使用 EC2/Lambda 实现可扩展计算。'
+					'AWS 基础级认证，涵盖云计算概念、服务与术语。'
 			},
 			usaco: {
 				title: 'USACO 银组',
 				issuer: '美国计算机奥林匹克竞赛',
 				description:
-					'参加高强度的算法竞赛，注重计算效率与数据结构优化。使用贪心算法、动态规划和图论解决需要 O(n log n) 性能的复杂问题。'
+					'参加 USACO 银组竞赛，培养算法分析与问题求解能力。'
 			}
 		},
 		socials: '社交媒体链接',

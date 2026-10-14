@@ -10,7 +10,7 @@
 			title: $t('exp.prism.title'),
 			company: $t('exp.prism.company'),
 			description: $t('exp.prism.description'),
-			skills: ['C++17', 'RcppArmadillo', 'Convex Optimization', 'KKT', 'Longitudinal Statistics'],
+			skills: ['C++17', 'RcppArmadillo', 'Numerical Optimization', 'Projected Gradient', 'Longitudinal Statistics'],
 			link: 'https://github.com/xguot/prism'
 		},
 		{
@@ -26,7 +26,7 @@
 			title: $t('exp.ke.title'),
 			company: $t('exp.ke.company'),
 			description: $t('exp.ke.description'),
-			skills: ['DFT', 'MongoDB', 'Fireworks', 'Go', 'Three.js', 'Quantum Materials'],
+			skills: ['DFT', 'MongoDB', 'Database Design', 'Go', 'Three.js', 'Quantum Materials'],
 			link: 'https://engineering.virginia.edu/faculty/liqin-ke'
 		},
 		{
@@ -34,7 +34,7 @@
 			title: $t('exp.biocomplexity.title'),
 			company: $t('exp.biocomplexity.company'),
 			description: $t('exp.biocomplexity.description'),
-			skills: ['GNN', 'Network Science', 'Simulation', 'SEIR', 'Python'],
+			skills: ['Julia', 'PyTorch Geometric', 'Independent Cascade', 'Workflow DAGs', 'Python'],
 			link: 'https://biocomplexity.virginia.edu/'
 		}
 	]);
@@ -43,13 +43,13 @@
 		{
 			title: $t('proj.lensless.title'),
 			description: $t('proj.lensless.description'),
-			tags: ['PyTorch', 'ADMM', 'QST', 'Lorentz Cone', 'HPC'],
+			tags: ['PyTorch', 'ADMM', 'Computational Imaging', 'Lorentz Cone', 'HPC'],
 			link: 'https://github.com/xguot/lensless-recon'
 		},
 		{
 			title: $t('proj.prism.title'),
 			description: $t('proj.prism.description'),
-			tags: ['C++17', 'RcppArmadillo', 'Convex Optimization', 'KKT', 'Statistics'],
+			tags: ['C++17', 'RcppArmadillo', 'Numerical Optimization', 'Projected Gradient', 'Statistics'],
 			link: 'https://github.com/xguot/prism'
 		},
 		{
@@ -59,14 +59,13 @@
 			link: 'https://difi.vercel.app/',
 			stars: 364,
 			thumbnail: '/difi-demo.gif',
-			hnRanking: 5,
 			hnLink: 'https://news.ycombinator.com/item?id=46870917'
 		},
 		{
 			title: $t('proj.stim.title'),
 			description: $t('proj.stim.description'),
 			tags: ['Quantum Computing', 'Stabilizer Circuits', 'C++', 'Open Source'],
-			link: 'https://github.com/quantumlib/stim'
+			link: 'https://github.com/quantumlib/Stim/pull/1099'
 		},
 		{
 			title: $t('proj.qudec.title'),

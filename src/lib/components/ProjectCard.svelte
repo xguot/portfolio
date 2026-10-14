@@ -5,7 +5,6 @@
 	export let link: string = '#';
 	export let stars: number | string | null = null;
 	export let thumbnail: string | null = null;
-	export let hnRanking: string | number | null = null;
 	export let hnLink: string | null = null;
 
 	let divElement: HTMLDivElement;
@@ -88,13 +87,13 @@
 		</p>
 
 		<div class="mt-3 flex items-center gap-4">
-			{#if hnRanking}
+			{#if hnLink}
 				<a
 					href={hnLink}
 					target="_blank"
 					class="text-cloud-dim relative z-20 flex items-center gap-1.5 font-mono text-xs transition-colors hover:text-[#ff6600]"
 				>
-					<span class="font-bold text-[#ff6600]">Y</span> HN #{hnRanking}
+					<span class="font-bold text-[#ff6600]">Y</span> Featured on HN
 				</a>
 			{/if}
 

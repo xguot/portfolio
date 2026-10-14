@@ -1,142 +1,168 @@
 \documentclass[11pt, letterpaper]{article}
 
-% --- Packages ---
-\usepackage[top=0.55in, bottom=0.55in, left=0.7in, right=0.7in]{geometry}
+\usepackage[top=0.6in, bottom=0.65in, left=0.7in, right=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
-\usepackage[T1]{fontenc}
-\usepackage{mathpazo} % Palatino font for classic academic elegance
-\usepackage{microtype} % Superior typography and letter spacing
-\usepackage{enumitem} % Advanced list control
-\usepackage{needspace} % Keep headings attached to their content
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{fancyhdr}
 
-\linespread{0.95}
+\definecolor{linkcolor}{RGB}{25,84,166}
+\hypersetup{colorlinks=true, urlcolor=linkcolor, linkcolor=linkcolor,
+    pdftitle={Academic CV - Xiyuan (Tommy) Guo}}
+\setlength{\parindent}{0pt}
+\setlength{\headheight}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\small Xiyuan (Tommy) Guo}
+\fancyfoot[R]{\small \thepage}
 
-% --- Colors ---
-\definecolor{primary}{RGB}{0, 0, 0}
-\definecolor{linkcolor}{RGB}{25, 84, 166}
-
-% --- Hyperlinks ---
-\hypersetup{
-    colorlinks=true,
-    linkcolor=linkcolor,
-    filecolor=linkcolor,
-    urlcolor=linkcolor,
-    pdftitle={Academic CV - Xiyuan GUO},
-}
-
-% --- Section Formatting ---
-\titleformat{\section}{
-  \Large\scshape\raggedright\bfseries\color{primary}
-}{}{0em}{}[\color{primary}\titlerule]
-
-% --- Custom CV Environments ---
+\titleformat{\section}{\large\scshape\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 \newenvironment{cvitemize}{
-    \begin{itemize}[leftmargin=0.2in, label={\textbullet}, itemsep=0pt, parsep=0pt, topsep=0pt]
-}{
-    \end{itemize}
-}
-
-\newcommand{\cvheading}[5][3.5\baselineskip]{
-    \needspace{#1}
-    \noindent\textbf{#2} \hfill #3 \par
+    \begin{itemize}[leftmargin=0.18in, label=\textbullet,
+        itemsep=2pt, parsep=0pt, topsep=3pt]
+}{\end{itemize}}
+\newcommand{\cvheading}[4]{
+    \needspace{5\baselineskip}
+    \textbf{#1}\hfill #2\par
     \nopagebreak
-    #4 \hfill \textit{#5}\par
+    #3\hfill\textit{#4}\par
     \nopagebreak
-    \vspace{1pt}\nopagebreak
 }
 
 \begin{document}
 
-% --- Heading ---
 \begin{center}
-    {\Huge \scshape \textbf{Xiyuan (Tommy) GUO}} \\ \vspace{4pt}
-    B.A. Candidate in Computer Science, University of Virginia \\ \vspace{2pt}
-    \href{mailto:mhn4xq@virginia.edu}{mhn4xq@virginia.edu} $\vert$ (516) 474-3279 $\vert$ \href{https://xguo.info}{xguo.info} $\vert$ \href{https://github.com/xguot}{github.com/xguot} \\ \vspace{2pt}
-    \textit{Theoretical quantum information; quantum error correction and quantum LDPC decoding; constrained optimization; computational imaging.}
+    {\LARGE\textbf{Xiyuan (Tommy) Guo}}\\[4pt]
+    B.A. Candidate in Computer Science, University of Virginia\\[3pt]
+    \small
+    \href{mailto:mhn4xq@virginia.edu}{mhn4xq@virginia.edu}
+    $\vert$ (516) 474-3279
+    $\vert$ \href{https://xguo.info}{xguo.info}
+    $\vert$ \href{https://github.com/xguot}{github.com/xguot}\\[4pt]
+    \textit{Quantum error correction; quantum LDPC decoding; constrained optimization.}
 \end{center}
-\vspace{1pt}
 
-% --- Education ---
-\section{EDUCATION}
-\cvheading{University of Virginia}{Expected May 2027}{B.A. in Computer Science}{Charlottesville, VA}
+\section{Education}
+\cvheading{University of Virginia}{Expected May 2027}
+    {B.A. in Computer Science; GPA: \textbf{3.73/4.00}}{Charlottesville, VA}
 \begin{cvitemize}
-    \item \textbf{GPA:} 3.73/4.00
-    \item \textbf{Relevant Coursework:} Graduate Quantum Computing (PHYS 5880, Prof. I. Klich; in progress).
-    \item \textbf{Independent Study:} Quantum information (Preskill lectures; Solovay--Kitaev theorem and approximation bounds); quantum mechanics (Griffiths, Sakurai).
+    \item \textbf{Coursework:} Graduate Quantum Computing
+    (PHYS 5880, Prof. Israel Klich; in progress).
+    \item \textbf{Independent study:} Quantum information
+    (Preskill lectures; Solovay--Kitaev theorem and approximation bounds)
+    and quantum mechanics (Griffiths, Sakurai).
 \end{cvitemize}
 
-% --- Research Experience ---
-\section{RESEARCH EXPERIENCE}
+\section{Research Experience}
 
-\cvheading{Research Assistant}{Feb 2026 -- Present}{Yale University (Prof. Mengxia Liu's Group)}{New Haven, CT}
+\cvheading{Quantum LDPC Decoding -- \texttt{qudec}}{}
+    {Independent research and open-source software}
+    {\href{https://github.com/xguot/qudec}{Project code}}
 \begin{cvitemize}
-    \item Built a joint spectro-polarimetric forward model that recovers a 324-channel datacube (spatial $\times$ 81 wavelength bands $\times$ 4 Stokes parameters) from a single multiplexed lensless speckle image.
-    \item Formulated the reconstruction as a conic-constrained inverse problem, enforcing a Lorentz-cone constraint on the Stokes vector ($S_0 \geq \|S_{1:3}\|$) to guarantee physically admissible polarization states.
-    \item Implemented a consensus ADMM solver in PyTorch with an exact joint proximal operator encoding the physical constraints, $L_1$ spectral sparsity, and Sherman--Morrison linear solves; runs on GPU via SLURM.
-    \item Calibrated PSF libraries with Gram--Schmidt orthogonalization to remove channel cross-talk and performed spectral unmixing via non-negative least squares.
+    \item Implemented LP-based and batched PyTorch ADMM decoders,
+    including parity-polytope projection using the two-slice representation.
+    \item Checked small-code behavior against exhaustive minimum-weight
+    baselines and compared ADMM objective values with an LP solver.
+    \item Benchmarked LP decoding on the $[[144,12,12]]$ bivariate bicycle
+    code under code-capacity noise and ADMM variants on $[[72,12,6]]$
+    under phenomenological noise; compared with BP+OSD and studied
+    sensitivity to LLR objective weights, ADMM penalties, and OSD sweeps.
 \end{cvitemize}
 
-\cvheading{Research Assistant}{Apr 2026 -- Present}{UVA BAL Lab (Prof. Xin Cynthia Tong's Group)}{Charlottesville, VA}
+\vspace{5pt}
+\cvheading{Research Assistant -- Yale University}{Feb 2026 -- Present}
+    {Prof. Mengxia Liu's Group}{New Haven, CT}
 \begin{cvitemize}
-    \item Developed PRISM, a constrained-projection framework for multivariate longitudinal missing-data imputation that projects initial imputations toward the model-implied covariance structure, correcting the variance attenuation of standard conditional-expectation methods.
-    \item Built the solver in C++17 (RcppArmadillo) with projected gradient descent, Armijo line search, exact mean-constraint projection, and KKT optimality checks.
-    \item Tested the framework on multi-qubit state tomography: the random-forest estimator did not transfer, while the constrained-projection layer did, demonstrating the value of the projection structure.
+    \item Developed a single-image spectro-polarimetric forward model
+    with \textbf{81 wavelength bands and four Stokes parameters}.
+    \item Formulated a constrained inverse problem combining spectral
+    sparsity with Lorentz-cone constraints on physically admissible Stokes vectors.
+    \item Implemented a GPU-enabled PyTorch ADMM solver with
+    Sherman--Morrison linear solves and SLURM execution; investigated
+    calibration cross-talk and spectral unmixing using non-negative least squares.
 \end{cvitemize}
 
-\cvheading{Research Assistant}{Oct 2025 -- Present}{UVA (Prof. Liqin Ke's Group)}{Charlottesville, VA}
+\vspace{5pt}
+\cvheading{Research Assistant -- UVA BAL Lab}{Apr 2026 -- Present}
+    {Prof. Xin Cynthia Tong's Group}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Studied transition-metal magnetic anisotropy and its relationship to structural motifs in crystal lattices with density functional theory (DFT).
-    \item Built interactive 3D atomic-structure visualizations (Three.js, JSmol) for real-time structural inspection.
-    \item Developed a shared ML pipeline (Go, Next.js) for collaborators to run predictive models on magnetic-property datasets.
-    \item Built the schema, API, and web interface for RareEarth DB, a rare-earth analogue of the Materials Project; the database curates 4,648 anisotropy measurements linked to ICSD/Pearson structures, with Fireworks-orchestrated DFT workflows on UVA HPC. DOE funding proposal in preparation.
+    \item Developed \textbf{PRISM}, a covariance-regularized framework
+    for multivariate longitudinal missing-data imputation, to study
+    variance attenuation in conditional-expectation estimates.
+    \item Implemented the solver in C++17/RcppArmadillo with projected
+    gradient descent, Armijo line search, mean-constraint projection,
+    and first-order stationarity diagnostics.
+    \item Conducted an exploratory three-qubit tomography study using
+    density-matrix projection to enforce positivity and unit trace;
+    compared random-forest imputation with a linear baseline.
 \end{cvitemize}
 
-\cvheading{Research Intern}{May 2026 -- Aug 2026}{UVA Biocomplexity Institute (Prof. Abhijin Adiga's Group)}{Charlottesville, VA}
+\newpage
+\section{Research Experience (Continued)}
+
+\cvheading{Research Assistant -- University of Virginia}{Oct 2025 -- Present}
+    {Prof. Liqin Ke's Group}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Engineered a Julia simulation engine for Independent Cascade diffusion and trained PyTorch Geometric GCNs to estimate total epidemic cascade size from sparse, partially observed network infections.
-    \item Developed an agentic workflow engine (Pydantic AI, NetworkX) that translates natural-language queries into verified execution DAGs for network-analysis pipelines, with deterministic validation and graph deduplication cutting redundant computation by $>40\%$.
+    \item Studied transition-metal magnetic anisotropy and its
+    relationship to structural motifs using density functional theory.
+    \item Built the schema, API, and interface for \textbf{RareEarth DB},
+    linking a \textbf{4,648-record} magnetic-anisotropy dataset
+    to ICSD/Pearson crystallographic structures.
+    \item Developed interactive three-dimensional atomic-structure
+    visualizations with Three.js and JSmol for structural inspection.
 \end{cvitemize}
 
-% --- Publications & Manuscripts ---
-\section{PUBLICATIONS \& MANUSCRIPTS IN PREPARATION}
+\vspace{5pt}
+\cvheading{Research Intern -- UVA Biocomplexity Institute}{May 2026 -- Aug 2026}
+    {Prof. Abhijin Adiga's Group}{Charlottesville, VA}
 \begin{cvitemize}
-    \item Guo, X., [Co-authors], Ke, L. "Transition-metal magnetic anisotropy and its relationship to structural motifs." \textit{[Manuscript in preparation]}.
-    \item Guo, X., [Co-authors], Liu, M. "Joint Spectro-Polarimetric Lensless Reconstruction via Conic-Constrained ADMM." \textit{[Manuscript in preparation]}. Code available on request.
-    \item Guo, X., [Co-authors], Tong, X.C. "PRISM: Lagrangian Projection Engines for Multivariate Longitudinal Missing Data Imputation." \textit{[Manuscript in preparation]}. Code: \href{https://github.com/xguot/prism}{github.com\slash xguot\slash prism}.
+    \item Built a Julia Independent Cascade simulator and trained
+    graph convolutional networks to estimate cascade size from sparse
+    infection observations.
+    \item Developed an LLM workflow prototype with execution-DAG
+    validation and deduplication; reduced DAG node count by
+    \textbf{43.8\%} in a three-polynomial demonstration.
 \end{cvitemize}
 
-% --- Open-Source Software ---
-\section{OPEN SOURCE SOFTWARE}
-\cvheading{qudec: Quantum LDPC Decoding Toolkit}{}{Open-source project}{\href{https://github.com/xguot/qudec}{github.com/xguot/qudec}}
+\section{Open-Source Contributions}
 \begin{cvitemize}
-    \item Implemented LP-based and batched PyTorch ADMM decoders for quantum LDPC codes, including exact parity-polytope projection via its two-slice representation.
-    \item Verified decoder correctness against brute-force maximum-likelihood decoding on small codes, then benchmarked against BP+OSD on bivariate bicycle codes: $[[144,12,12]]$ under code-capacity noise, $[[72,12,6]]$ under phenomenological noise.
-    \item Tuned the ADMM penalty ($\rho = 4$ plus an OSD sweep) to close the gap with BP+OSD, normalized LLR penalty weights to prevent trivial fixed points, and characterized BP failure modes on degenerate codes.
-\end{cvitemize}
-\begin{cvitemize}
-    \item \textbf{stim:} Authored pull request \#1099 to Stim, Google's open-source quantum stabilizer circuit simulator; accepted by the maintainers.
-    \item \textbf{sanjaya:} Academic literature extraction pipeline (OpenAlex API, Scrapy, Playwright).
-    \item \textbf{difi:} Go-based Git diff TUI; Homebrew Core, 365+ GitHub stars, \#5 on Hacker News.
+    \item \textbf{Stim:} Submitted
+    \href{https://github.com/quantumlib/Stim/pull/1099}{PR \#1099}
+    to the quantum stabilizer circuit simulator; under maintainer review.
+    \item \textbf{\href{https://github.com/xguot/difi}{difi}:}
+    Developed a Go-based Git diff terminal interface with editor-aware
+    navigation; distributed through Homebrew Core and featured on Hacker News.
+    \item \textbf{\href{https://github.com/xguot/sanjaya}{sanjaya}:}
+    Built an academic-literature extraction pipeline using OpenAlex,
+    Scrapy, and Playwright.
 \end{cvitemize}
 
-% --- Honors, Awards & Grants ---
-\section{HONORS, AWARDS, AND GRANTS}
+\section{Honors and Awards}
 \begin{cvitemize}
-    \item \textbf{Double Hoo Research Grant}, University of Virginia (\$5,000) \hfill \textit{2026}
+    \item \textbf{Double Hoo Research Grant}, University of Virginia
+    (\$5,000)\hfill 2026
     \item \textbf{Dean's List of Distinguished Students}, University of Virginia
-    \item \textbf{Silver Division}, USA Computing Olympiad (USACO)
+    \item \textbf{USACO Silver Division}, USA Computing Olympiad
 \end{cvitemize}
 
-% --- Skills ---
-\section{TECHNICAL SKILLS}
-\begin{cvitemize}
-    \item \textbf{Programming:} Python, C/C++, Julia, Rust, Go, TypeScript, R, SQL, Bash, \LaTeX. \textbf{Scientific computing:} PyTorch/CUDA, JAX, PyTorch Geometric, scikit-learn, pandas, RcppArmadillo. \textbf{Systems \& HPC:} Linux, Docker, K3s Kubernetes, Slurm HPC, Git. \textbf{Math \& Physics:} Quantum mechanics, quantum information, convex optimization, linear algebra, matrix calculus.
-\end{cvitemize}
+\section{Technical Skills}
+\textbf{Programming:} Python, C/C++, Julia, Rust, Go, TypeScript, R, SQL.\par
+\textbf{Scientific computing:} PyTorch/CUDA, JAX, PyTorch Geometric,
+scikit-learn, pandas, RcppArmadillo.\par
+\textbf{Systems and HPC:} Linux, SLURM, Git, Docker, Kubernetes, Bash.\par
+\textbf{Methods:} Constrained optimization, quantum error correction,
+computational imaging, linear algebra, matrix calculus.
 
-% --- Service ---
-\section{COMMUNITY SERVICE}
-\cvheading[0pt]{Volunteer Firefighter}{2022 -- 2024}{Plainfield Fire Department}{Plainfield}
+\section{Community Service}
+\textbf{Volunteer Firefighter}, Plainfield Fire Department
+\hfill 2022 -- 2024
 
 \end{document}
