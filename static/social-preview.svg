@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <path d="M80 90h1040" stroke="#e8e8e8" stroke-width="2"/>
+  <circle cx="88" cy="154" r="6" fill="#32715e"/>
+  <text x="110" y="161" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#505650">UNIVERSITY OF VIRGINIA</text>
+  <text x="80" y="297" font-family="Helvetica, Arial, sans-serif" font-size="68" font-weight="bold" fill="#17251f">Xiyuan (Tommy) Guo</text>
+  <text x="80" y="379" font-family="Helvetica, Arial, sans-serif" font-size="35" fill="#32715e">Quantum error correction</text>
+  <text x="80" y="432" font-family="Helvetica, Arial, sans-serif" font-size="35" fill="#32715e">Constrained optimization</text>
+  <path d="M80 507h1040" stroke="#e8e8e8" stroke-width="2"/>
+  <text x="80" y="556" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#505650">xguo.info</text>
+</svg>

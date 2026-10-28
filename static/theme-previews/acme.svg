@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1012" viewBox="0 0 1800 1012">
+  <title>Acme theme preview</title>
+  <rect width="1800" height="1012" fill="#ffffea"/>
+  <g font-family="monospace" fill="#000000">
+    <rect width="1800" height="64" fill="#eaffff"/>
+    <path d="M0 64h1800M410 64v884M0 948h1800" stroke="#99994c" stroke-width="2"/>
+    <text x="70" y="43" font-size="30">New Cut Paste Snarf Sort Zerox Delcol</text>
+    <rect x="0" y="66" width="408" height="60" fill="#eaffff"/>
+    <text x="70" y="106" font-size="27">research/</text>
+    <text x="70" y="188" font-size="28" fill="#000099">overview</text>
+    <text x="70" y="242" font-size="28">qudec/</text>
+    <text x="70" y="296" font-size="28">lensless-recon/</text>
+    <text x="70" y="350" font-size="28">prism/</text>
+    <text x="70" y="440" font-size="23" fill="#444444">Xiyuan (Tommy) Guo</text>
+    <text x="70" y="478" font-size="23" fill="#444444">University of Virginia</text>
+    <rect x="412" y="66" width="1388" height="60" fill="#eaffff"/>
+    <text x="444" y="106" font-size="27">research/overview.txt</text>
+    <text x="470" y="215" font-size="42" font-weight="bold" fill="#000099">Quantum error correction</text>
+    <text x="470" y="275" font-size="30">Constrained optimization and quantum LDPC decoding.</text>
+    <text x="470" y="375" font-size="33" fill="#000099">qudec</text>
+    <text x="470" y="429" font-size="29">LP and batched ADMM decoders for bivariate bicycle codes.</text>
+    <text x="470" y="477" font-size="29" fill="#444444">Comparisons with BP+OSD under increasingly realistic noise.</text>
+    <text x="470" y="580" font-size="33" fill="#000099">Constrained image reconstruction</text>
+    <text x="470" y="634" font-size="29">81 spectral bands and four Stokes channels.</text>
+    <text x="470" y="682" font-size="29" fill="#444444">Physical constraints and spectral sparsity priors.</text>
+    <text x="470" y="785" font-size="33" fill="#000099">PRISM</text>
+    <text x="470" y="839" font-size="29">Covariance-constrained missing-data imputation.</text>
+    <rect x="0" y="950" width="1800" height="62" fill="#eaffff"/>
+    <text x="70" y="990" font-size="25">Del Snarf | research/overview.txt</text>
+    <text x="1740" y="990" text-anchor="end" font-size="25" fill="#000099">Acme</text>
+  </g>
+</svg>

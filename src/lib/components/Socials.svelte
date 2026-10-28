@@ -3,19 +3,18 @@
 
 	const links = [
 		{ name: 'GitHub', url: 'https://github.com/xguot', icon: 'github' },
-		{ name: 'LinkedIn', url: 'https://linkedin.com/in/xiyuan-tommy-guo', icon: 'linkedin' },
-		{ name: 'Email', url: 'mailto:mhn4xq@virginia.edu', icon: 'mail' }
+		{ name: 'LinkedIn', url: 'https://linkedin.com/in/xiyuan-tommy-guo', icon: 'linkedin' }
 	];
 </script>
 
-<ul class="mt-8 flex items-center gap-6 lg:mt-0" aria-label={$t('socials')}>
-	{#each links as link}
+<ul class="flex items-center gap-5" aria-label={$t('socials')}>
+	{#each links as link (link.name)}
 		<li>
 			<a
 				href={link.url}
 				target="_blank"
-				rel="noreferrer"
-				class="text-cloud-dim hover:text-reze block transition-colors duration-300"
+				rel="noreferrer external"
+				class="block text-cloud-dim transition-colors duration-300 hover:text-reze"
 				aria-label={link.name}
 			>
 				<svg
@@ -27,7 +26,7 @@
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="h-6 w-6"
+					class="h-5 w-5"
 				>
 					{#if link.icon === 'github'}
 						<path
@@ -36,18 +35,10 @@
 					{/if}
 
 					{#if link.icon === 'linkedin'}
-						<path
-							d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
 						></path>
 						<rect x="2" y="9" width="4" height="12"></rect>
 						<circle cx="4" cy="4" r="2"></circle>
-					{/if}
-
-					{#if link.icon === 'mail'}
-						<path
-							d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-						></path>
-						<polyline points="22,6 12,13 2,6"></polyline>
 					{/if}
 				</svg>
 			</a>

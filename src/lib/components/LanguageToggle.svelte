@@ -2,13 +2,10 @@
 	import { t, toggleLang, isZh } from '$lib/i18n';
 </script>
 
-<div class="pointer-events-none fixed right-4 bottom-20 z-40 sm:right-6 lg:right-6 lg:bottom-6">
-	<button
-		type="button"
-		onclick={toggleLang}
-		aria-label={$t('langLabel')}
-		class="text-cloud-dim hover:text-cloud bg-bg-card/70 border-cloud/15 hover:border-reze/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-reze pointer-events-auto rounded-full border px-2.5 py-1 font-mono text-[11px] font-medium tracking-wide backdrop-blur transition-colors"
-	>
-		{$isZh ? 'EN' : '中'}
-	</button>
-</div>
+<button
+	type="button"
+	onclick={toggleLang}
+	aria-label={$t('langLabel')}
+	class="px-1 py-2 text-xs text-cloud-dim transition-colors hover:text-cloud"
+	>{$isZh ? 'EN' : '中文'}</button
+>

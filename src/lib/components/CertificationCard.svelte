@@ -39,7 +39,7 @@
 	></div>
 
 	<div
-		class="lg:group-hover:bg-bg-card/50 absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
+		class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-bg-card/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
 	></div>
 
 	<header class="z-10 flex flex-col items-center gap-4 pt-1 sm:col-span-3">
@@ -52,15 +52,15 @@
 				/>
 			</div>
 		{/if}
-		<span class="text-cloud-dim text-xs font-mono font-semibold tracking-wide uppercase">
+		<span class="font-mono text-xs font-semibold tracking-wide text-cloud-dim uppercase">
 			{date}
 		</span>
 	</header>
 
 	<div class="relative z-10 flex flex-col justify-center pt-1 sm:col-span-5">
-		<h3 class="text-cloud leading-snug font-medium text-xl">
+		<h3 class="text-xl leading-snug font-medium text-cloud">
 			<span
-				class="text-cloud group-hover:text-reze inline-flex items-baseline leading-tight font-medium transition-colors"
+				class="inline-flex items-baseline leading-tight font-medium text-cloud transition-colors group-hover:text-reze"
 			>
 				{title} · {issuer}
 				<svg
@@ -76,7 +76,7 @@
 			</span>
 		</h3>
 
-		<p class="text-cloud-dim mt-3 text-sm leading-relaxed">
+		<p class="mt-3 text-sm leading-relaxed text-cloud-dim">
 			{description}
 		</p>
 	</div>
